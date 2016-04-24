@@ -6,12 +6,12 @@
 
 ## Minimum Viable Product
 
-FresherNote is a web application inspired by Evernote that will be build using Ruby on Rails and React.js.  By the end of Week 9, this app will, at a minimum, satisfy the following criteria:
+SessionFinder is a web application inspired by AirBnB. It will use Ruby on Rails to handle the backend database management and React.js to create a interactive frontend.  By the end of Week 9, this app will, at a minimum, satisfy the following criteria:
 
 - [ ] New account creation, login, and guest/demo login
-- [ ] Smooth, bug-free navigation
+- [ ] bug-free navigation
 - [ ] Adequate seed data to demonstrate the site's features
-- [ ] The minimally necessary features for an Evernote-inspired site: note creation and saving, note editing, and notes organized into notebooks
+- [ ] The minimally necessary features for an AirBnB-inspired site: Event Creation, Map integration showing location of events, filtering events based on a number of factors
 - [ ] Hosting on Heroku
 - [ ] CSS styling that is satisfactorily visually appealing
 - [ ] A production README, replacing this README (**NB**: check out the [sample production README](https://github.com/appacademy/sample-project-proposal/blob/master/docs/production_readme.md) -- you'll write this later)
@@ -25,10 +25,11 @@ progress. Put an x between the brackets for a checkmark: [x] -->
 
 - [ ] Create an account (MVP)
 - [ ] Log in / Log out, including as a Guest/Demo User (MVP)
-- [ ] Create, read, edit, and delete notes (MVP)
-- [ ] Organize notes within Notebooks (MVP)
-- [ ] Tag notes with multiple tags (expected feature, but not MVP)
-- [ ] Apply complex styling to notes while editing (expected feature, but not MVP)
+- [ ] View, and review/comment on events(MVP)
+- [ ] Create events (expected but not MVP)
+- [ ] Filter events using tags such as game type or start time/date (expected feature, but not MVP)
+- [ ] View all events on a map (expected feature, but not MVP)
+- [ ] View past results for ongoing events (stretch goal, set up a API scraper)
 
 ## Design Docs
 * [View Wireframes][views]
