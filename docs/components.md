@@ -1,13 +1,16 @@
 ## Component Hierarchy
 
 * `App`
-  * `SearchIndex`
-  * `NotebooksIndex`
-    * `NotebookIndexItem`
-  * `NotebookForm`
-  * `NotesIndex`
-    * `NoteForm`
-    * `NoteIndexItem`
-  * `NoteDetail`
-    * `NoteTags`
-    * `NoteEditArea`
+  * `SessionFilter`
+  * `SessionIndex`
+    * `SessionIndexItem`
+  * `SessionForm`
+  * `SessionLocation(map)`
+  * `SessionItem`
+    * `SessionItemReview`
+      * `SessionItemReviewItem`
+    * `SessionItemDescription`
+      * `SessionItemDescriptionTitle`
+      * `SessionItemDescriptionLocation`
+      * `SessionItemDescriptionText`
+    * `SessionItemImage`
