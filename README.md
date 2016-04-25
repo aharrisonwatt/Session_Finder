@@ -91,6 +91,8 @@ are planned.
 - [ ] ????
 - [ ] Make map
 
+### Phase 6: Landing Page 
+
 ### Phase 5: Start Styling (0.5 days)
 
 **Objective:** Existing pages (including singup/signin) will look good.

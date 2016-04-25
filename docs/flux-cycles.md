@@ -27,7 +27,7 @@ what you'll need to do.
   0. `receiveSingleHappening` is set as the callback.
 
 * `fetchSingleHappening`
-  0. invoked from `HappeningViewer` `didMount`/`willReceiveProps`
+  0. invoked from `HappeningIndexItem` `didMount`/`willReceiveProps`
   0. `GET /api/happening/:id` is called.
   0. `receiveSingleHappening` is set as the callback.
 
@@ -58,4 +58,4 @@ what you'll need to do.
 ### Store Listeners
 
 * `HappeningIndex` component listens to `Happening` store.
-* `HappeningViewer` component listens to `Happening` store.
+* `HappeningIndexItem` component listens to `Happening` store.
