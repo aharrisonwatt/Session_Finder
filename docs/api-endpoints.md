@@ -34,6 +34,6 @@
 
 - A happening's tags will be included in the note show template
 - `GET /api/tags`
-- `POST /api/notes/:note_id/tags`: add tag to happening by name
-- `DELETE /api/notes/:note_id/tags/:tag_name`: remove tag from happening by
+- `POST /api/tags`: add tag to happening (include happening in params)
+- `DELETE /api/tags`: remove tag from happening
   name
