@@ -1,22 +1,22 @@
 # View Wireframes
 
-## New User
-![new-user]
+## NavBar
+![NavBar]
 
-## New Session
-![new-session]
+## Create Happening
+![create-session]
 
-## NotesIndex / NoteIndexItem / NoteForm
-![notes]
+## Happening Index
+![happening]
 
-## NotebooksIndex / NotebookIndexItem
-![notebooks]
+## Session Viewer
+![session-viewer]
 
-## NotebookForm
-![notebook-form]
+## Sign in / Sign Up
+![Signup]
 
-[new-user]: ./wireframes/new_user.png
-[new-session]: ./wireframes/new_session.png
-[notes]: ./wireframes/root_notes.png
-[notebooks]: ./wireframes/root_notebooks.png
-[notebook-form]: ./wireframes/notebook_form.png
+[NavBar]: ./wireframes/Navbar.png
+[create-session]: ./wireframes/Create_Session.png
+[happening]: ./wireframes/Session_Index.png
+[session-viewer]: ./wireframes/Session_viewer.png
+[Signup]: ./wireframes/Sign_in-Sign_up.png
