@@ -1,4 +1,4 @@
-# FresherNote
+# SessionFinder
 
 [Heroku link][heroku] **NB:** This should be a link to your production site
 
@@ -14,11 +14,10 @@ SessionFinder is a web application inspired by AirBnB. It will use Ruby on Rails
 - [ ] The minimally necessary features for an AirBnB-inspired site: Event Creation, Map integration showing location of events, filtering events based on a number of factors
 - [ ] Hosting on Heroku
 - [ ] CSS styling that is satisfactorily visually appealing
-- [ ] A production README, replacing this README (**NB**: check out the [sample production README](https://github.com/appacademy/sample-project-proposal/blob/master/docs/production_readme.md) -- you'll write this later)
 
 ## Product Goals and Priorities
 
-FresherNote will allow users to do the following:
+SessionFinder will allow users to do the following:
 
 <!-- This is a Markdown checklist. Use it to keep track of your
 progress. Put an x between the brackets for a checkmark: [x] -->
@@ -112,6 +111,7 @@ user interface.
 - [ ] Add modals, transitions, and other styling flourishes.
 
 ### Bonus Features (TBD)
+- [ ] Increase Happenings creation options
 - [ ] Redo Search in area for map
 - [ ] Update happenings as map moves
 - [ ] More time on CSS
