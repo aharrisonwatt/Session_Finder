@@ -91,8 +91,6 @@ are planned.
 - [ ] ????
 - [ ] Make map
 
-### Phase 6: Landing Page 
-
 ### Phase 5: Start Styling (0.5 days)
 
 **Objective:** Existing pages (including singup/signin) will look good.
@@ -103,11 +101,12 @@ are planned.
 
 ### Phase 6: Styling Cleanup and Seeding (1 day)
 
-**objective:** Make the site feel more cohesive and awesome.
+**objective:** Make the site feel more cohesive and amazing.
 
 - [ ] Get feedback on my UI from others
 - [ ] Refactor HTML classes & CSS rules
 - [ ] Add modals, transitions, and other styling flourishes.
+- [ ] add Landing Page
 
 ### Bonus Features (TBD)
 - [ ] Tags
