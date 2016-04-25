@@ -23,4 +23,4 @@
 [happening]: ./wireframes/Session_Index.png
 [session-viewer]: ./wireframes/Session_viewer.png
 [Signup]: ./wireframes/Sign_in-Sign_up.png
-[Landing_page]: ./wireframes/Spash_page.png
+[Landing_page]: ./wireframes/Spash_Page.png
