@@ -16,15 +16,15 @@ what you'll need to do.
 
 ### Notes API Request Actions
 
-* `fetchAllNotes`
-  0. invoked from `NotesIndex` `didMount`/`willReceiveProps`
-  0. `GET /api/notes` is called.
-  0. `receiveAllNotes` is set as the callback.
+* `fetchAllHapennings`
+  0. invoked from `HappeningIndex` `didMount`/`willReceiveProps`
+  0. `GET /api/Happenings` is called.
+  0. `receiveAllHappenings` is set as the callback.
 
-* `createNote`
-  0. invoked from new note button `onClick`
-  0. `POST /api/notes` is called.
-  0. `receiveSingleNote` is set as the callback.
+* `createHappening`
+  0. invoked from new session button `onClick`
+  0. `POST /api/happenings` is called.
+  0. `receiveSingleHappening` is set as the callback.
 
 * `fetchSingleNote`
   0. invoked from `NoteDetail` `didMount`/`willReceiveProps`

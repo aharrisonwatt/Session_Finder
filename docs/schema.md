@@ -14,7 +14,7 @@ column name | data type | details
 id          | integer   | not null, primary key
 user_id     | integer   | not null, foreign key (references users), indexed
 happening_id| string    | not null, foreign key (references happenings), indexed
-body        | string    | not null
+body        | text      | not null
 
 ## happenings
 column name | data type | details
@@ -25,7 +25,7 @@ date        | datetime  | not null
 lat         | float     | not null
 lng         | float     | not null
 title       | string    | not null
-body        | string    | not null
+body        | text      | not null
 
 ## tags
 column name | data type | details
@@ -37,6 +37,5 @@ name        | string    | not null
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-name        | string    | not null
-happening_id     | integer   | not null, foreign key (references notes), indexed, unique [tag_id]
+happening_id| integer   | not null, foreign key (references notes), indexed, unique [tag_id]
 tag_id      | integer   | not null, foreign key (references tags), indexed
