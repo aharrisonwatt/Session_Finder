@@ -24,8 +24,9 @@ progress. Put an x between the brackets for a checkmark: [x] -->
 
 - [ ] Create an account (MVP)
 - [ ] Log in / Log out, including as a Guest/Demo User (MVP)
-- [ ] View, and review/comment on events(MVP)
-- [ ] Create events (expected but not MVP)
+- [ ] Create events (MVP)
+- [ ] View events(MVP)
+- [ ] Comment/review event (expected but not MVP)
 - [ ] Filter events using tags such as game type or start time/date (expected feature, but not MVP)
 - [ ] View all events on a map (expected feature, but not MVP)
 - [ ] View past results for ongoing events (stretch goal, set up a API scraper)
@@ -55,15 +56,15 @@ progress. Put an x between the brackets for a checkmark: [x] -->
 - [ ] user signup/signin pages
 - [ ] blank landing page after signin
 
-### Phase 2: Notes Model, API, and basic APIUtil (1.5 days)
+### Phase 2: Happenings Model, API, and basic APIUtil (1 days)
 
 **Objective:** Happenings can be created, read, edited and destroyed through
 the API.
 
 - [ ] create `Happening` model
 - [ ] seed the database with a small amount of test data
-- [ ] CRUD API for notes (`HappeningsController`)
-- [ ] jBuilder views for notes
+- [ ] CRUD API for happenings (`HappeningsController`)
+- [ ] jBuilder views for happenings
 - [ ] setup Webpack & Flux scaffold
 - [ ] setup `APIUtil` to interact with the API
 - [ ] test out API interaction in the console.
@@ -79,10 +80,18 @@ user interface.
   - [ ] `HappeningsIndex`
   - [ ] `HappeningIndexItem`
   - [ ] `HappeningForm`
-  - [ ] `Map`
   - [ ] `NavBar`
 
-### Phase 4: Start Styling (0.5 days)
+### Phase 4: Map Integration (1 days)
+
+**Objective:** Map is integrated with the page and shows where Happenings
+are planned.
+
+- [ ] Research how to do map integration
+- [ ] ????
+- [ ] Make map
+
+### Phase 5: Start Styling (0.5 days)
 
 **Objective:** Existing pages (including singup/signin) will look good.
 
@@ -90,19 +99,7 @@ user interface.
 - [ ] position elements on the page
 - [ ] add basic colors & styles
 
-### Phase 5: Tags (2 days)
-
-**Objective:** Happenings can be tagged with multiple tags, and tags are searchable.
-
-- [ ] create `Tag` model and join table
-- build out API, Flux loop, and components for:
-  - [ ] fetching tags for Happening
-  - [ ] adding tags to Happening
-  - [ ] creating tags while adding to Happening
-  - [ ] searching Happening by tag
-- [ ] Style new elements
-
-### Phase 6: Styling Cleanup and Seeding (1.5 day)
+### Phase 6: Styling Cleanup and Seeding (1 day)
 
 **objective:** Make the site feel more cohesive and awesome.
 
@@ -111,6 +108,14 @@ user interface.
 - [ ] Add modals, transitions, and other styling flourishes.
 
 ### Bonus Features (TBD)
+- [ ] Tags
+  - [ ] create `Tag` model and join table
+  - build out API, Flux loop, and components for:
+    - [ ] fetching tags for Happening
+    - [ ] adding tags to Happening
+    - [ ] creating tags while adding to Happening
+    - [ ] searching Happening by tag
+  - [ ] Style new elements
 - [ ] Increase Happenings creation options
 - [ ] Redo Search in area for map
 - [ ] Update happenings as map moves
