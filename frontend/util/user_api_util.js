@@ -1,12 +1,12 @@
 var AppDispatcher = require('../dispatcher/dispatcher');
 var UserConstants = require('../constants/user_constants')
 module.exports = {
-  fetchCurrentUser: function(success, error){
+  fetchCurrentUser: function(){
     $.ajax({
       url: "api/session",
       method: "GET",
-      success: success,
-      error: error
+      success: this.recieveCurrentUser(user),
+      error: this.handleError(error)
     });
   },
 
@@ -15,8 +15,8 @@ module.exports = {
       url: "api/session",
       type: "POST",
       data: { user: user},
-      success: this.recieveCurrentUser,
-      error: this.handleError
+      success: this.recieveCurrentUser(user),
+      error: this.handleError(error)
     });
   },
 
@@ -24,8 +24,8 @@ module.exports = {
     $.ajax({
       url: "api/session",
       method: "DELETE",
-      success: success,
-      error: error
+      success: this.removeCurrentUser(),
+      error: this.handleError(error)
   },
 
   create: function(user){
@@ -33,8 +33,14 @@ module.exports = {
       url: "api/user",
       type: "POST",
       data: { user: user},
-      success: this.recieveCurrentUser,
-      error: this.handleError
+      success: this.recieveCurrentUser(user),
+      error: this.handleError(error)
+    });
+  },
+
+  removeCurrentUser: function(user){
+    AppDispatcher.dispatch({
+      actionType: UserConstants.LOGOUT
     });
   },
 
