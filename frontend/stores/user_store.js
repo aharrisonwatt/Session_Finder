@@ -30,6 +30,10 @@ UserStore.currentUser = function(){
   return _currentUser;
 };
 
+UserStore.currentErrors = function(){
+  return _autherrors;
+};
+
 //private methods
 function logout(){
   _currentUser = null;
