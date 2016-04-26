@@ -13,9 +13,13 @@ module.exports = {
 
   componentDidMount: function() {
     UserStore.addListener(this.updateUser);
-    if (!this.state.currentUser){
+    if (typeof UserStore.currentUser() === 'undefined'){
       UserActions.fetchCurrentUser();
     }
+  },
+
+  componentWillUnmount: function() {
+
   },
 
   updateUser: function() {
