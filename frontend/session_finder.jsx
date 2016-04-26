@@ -13,7 +13,9 @@ var ReactRouter = require('react-router'),
 var App = require('./components/app');
 
 var Routes = (
-  <Router history={hashHistory} routes={App} />
+  <Router history={hashHistory}>
+    <Route path="/" component={App} />
+  </Router>
 );
 
 
