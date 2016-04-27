@@ -1,1 +1,1 @@
-json.partial!('happenings', happening: @happeing)
+json.partial!('happenings', happening: @happening)
