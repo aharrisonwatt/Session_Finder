@@ -63,8 +63,8 @@ the API.
 
 - [x] create `Happening` model
 - [x] seed the database with a small amount of test data
-- [ ] CRUD API for happenings (`HappeningsController`)
-- [ ] jBuilder views for happenings
+- [x] CRUD API for happenings (`HappeningsController`)
+- [x] jBuilder views for happenings
 - [ ] setup Webpack & Flux scaffold
 - [ ] setup `APIUtil` to interact with the API
 - [ ] test out API interaction in the console.

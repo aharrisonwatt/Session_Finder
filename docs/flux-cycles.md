@@ -16,7 +16,7 @@ what you'll need to do.
 
 ### Happenings API Request Actions
 
-* `fetchAllHapennings`
+* `fetchAllHappenings`
   0. invoked from `HappeningIndex` `didMount`/`willReceiveProps`
   0. `GET /api/Happenings` is called.
   0. `receiveAllHappenings` is set as the callback.

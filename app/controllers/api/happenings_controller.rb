@@ -13,7 +13,7 @@ class HappeningsController < ApplicationController
     @happening = Happening.create!(happening_params)
     render 'show'
   end
-  
+
   private
   def happening_params
     params.require(:user).permit(
