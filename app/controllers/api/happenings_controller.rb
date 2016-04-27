@@ -1,14 +1,25 @@
 class HappeningsController < ApplicationController
-  def create
-    @happening = Happening.new(happening_params)
-    if @happening.save
-      render "api/happening/show"
-    else
-      @errors = @happening.errors.full_messages
-      render "api/shared/error", status: 422
-    end
+  def index
+    @happenings = Happening.all
+    render 'index'
   end
-  
+
+  def show
+    @happening = Happening.find(params[:id])
+    render 'show'
+  end
+
+  def create
+    happening = Happening.create!(happening_params)
+    render 'show'
+  end
+
+  def update
+  end
+
+  def destroy
+  end
+
   private
   def happening_params
     params.require(:user).permit(
