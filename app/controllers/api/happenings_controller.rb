@@ -10,16 +10,10 @@ class HappeningsController < ApplicationController
   end
 
   def create
-    happening = Happening.create!(happening_params)
+    @happening = Happening.create!(happening_params)
     render 'show'
   end
-
-  def update
-  end
-
-  def destroy
-  end
-
+  
   private
   def happening_params
     params.require(:user).permit(
