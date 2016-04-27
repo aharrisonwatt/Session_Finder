@@ -1,4 +1,4 @@
-class HappeningsController < ApplicationController
+class Api::HappeningsController < ApplicationController
   def index
     @happenings = Happening.all
     render 'index'
