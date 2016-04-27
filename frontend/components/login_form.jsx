@@ -45,7 +45,7 @@ var LoginForm = React.createClass({
 
       return (
         <div>
-          <input type="submit" value="logout" onClick={this.logout} />
+          <button onClick={this.logout}>Logout</button>
         </div>
       );
     },
@@ -107,7 +107,7 @@ var LoginForm = React.createClass({
             </label>
           </section>
 
-          <input type="Submit" value="Submit"/>
+          <input type="Submit"/>
         </form>
       );
     },

@@ -3,8 +3,8 @@ var Store = require('flux/utils').Store;
 var UserConstants = require('../constants/user_constants');
 
 var UserStore = new Store(AppDispatcher);
-var _currentUser = null;
-var _autherrors = null;
+var _currentUser;
+var _autherrors;
 
 
 
@@ -37,10 +37,12 @@ UserStore.authErrors = function(){
 //private methods
 function logout(){
   _currentUser = null;
+  _autherrors = null;
 }
 
 function login(user){
   _currentUser = user;
+  _autherrors = null;
 }
 
 function handleError(error){

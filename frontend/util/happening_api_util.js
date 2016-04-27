@@ -7,6 +7,7 @@ var HappeningApiUtil = {
       url: "api/happenings",
       method: "GET",
       success: function(happenings){
+        console.log(happenings);
         ServerActions.receiveAllHappenings(happenings);
       }
     });
@@ -18,17 +19,19 @@ var HappeningApiUtil = {
       method: "POST",
       data: {happeing: happening},
       success: function(newHappening){
+        console.log(newHappening);
         ServerActions.receiveSingleHappenings(newHappening);
       }
     });
   },
 
-  fetchSingleHappenings: function(id){
+  fetchSingleHappening: function(id){
     $.ajax({
       url: "api/happenings/" + id,
       method: "GET",
       success: function(happening){
-        ServerActions.receiveSingleHappenings(happening);
+        console.log(happening);
+        ServerActions.receiveSingleHappening(happening);
       }
     });
   }
