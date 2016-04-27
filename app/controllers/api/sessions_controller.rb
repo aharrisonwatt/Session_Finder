@@ -14,7 +14,7 @@ class Api::SessionsController < ApplicationController
       sign_in(user)
       render "api/users/show"
     else
-      flash.now[:errors] = ["Invalid username or password"]
+      @errors = ['invalid Username/Password']
       render "api/shared/error", status: 401
     end
   end

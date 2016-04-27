@@ -6,7 +6,7 @@ module.exports = {
   },
 
   login: function(user){
-    UserApiUtil.login();
+    UserApiUtil.login(user);
   },
 
   logout: function(){
@@ -14,7 +14,7 @@ module.exports = {
   },
 
   create: function(user){
-    UserApiUtil.create();
+    UserApiUtil.create(user);
   },
 
 };

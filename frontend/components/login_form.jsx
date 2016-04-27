@@ -6,7 +6,11 @@ var LoginForm = React.createClass({
     mixins: [CurrentUserState],
 
     getInitialState: function(){
-		  return {form: "login"};
+		  return {
+        form: "login",
+        username: 'defaultUsername',
+        password: 'defaultPassword'
+      };
     },
 
     setForm: function(event){
@@ -27,11 +31,11 @@ var LoginForm = React.createClass({
     },
 
     updatePassword: function(event){
-      this.setState({ password: event.currentTarget.value});
+      this.setState({ password: event.target.value});
     },
 
     updateUsername: function(evetn){
-      this.setState({ username: event.currentTarget.value});
+      this.setState({ username: event.target.value});
     },
 
     greeting: function(){
@@ -74,12 +78,14 @@ var LoginForm = React.createClass({
         		<label> Username:
         			<input
                 type="text"
+                value={this.state.username}
                 onChange={this.updateUsername}/>
         		</label>
 
         		<label> Password:
         			<input
                 type="password"
+                value={this.state.password}
                 onChange={this.updatePassword}/>
         		</label>
         	</section>
@@ -93,7 +99,11 @@ var LoginForm = React.createClass({
                 onChange={this.setForm}/>
             </label>
             <label> Signup
-              <input type="Radio" name="action" value="create" onChange={this.setForm}/>
+              <input
+                type="Radio"
+                name="action"
+                value="create"
+                onChange={this.setForm}/>
             </label>
           </section>
 
