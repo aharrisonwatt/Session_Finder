@@ -7,5 +7,14 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Happening.create([
-  { user_id: 1}, { date: DateTime.now}
+  { user_id: 1, date: DateTime.now, lat: 37.754936, lng: -122.427295,
+    title: "Watts Home", body: "This is where I grew up", game: "Street Fighter"},
+  { user_id: 1, date: DateTime.now, lat: 37.769271, lng: -122.440138,
+    title: "Buena Vista Park", body: "A park", game: "Smash"},
+  { user_id: 1, date: DateTime.now, lat: 37.738529, lng: -122.453270,
+    title: "Under The Cross", body: "Not The Cross though", game: "Street Fighter"},
+  { user_id: 1, date: DateTime.now, lat: 37.743416, lng: -122.416019,
+    title: "??????", body: "WHERE AM I", game: "Mario Kart"},
+  { user_id: 1, date: DateTime.now, lat: 37.791657, lng: -122.467518,
+    title: "Golf Course", body: "This one is a little random", game: "Legue of Legends"},
   ])

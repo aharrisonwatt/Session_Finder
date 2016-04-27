@@ -61,8 +61,8 @@ progress. Put an x between the brackets for a checkmark: [x] -->
 **Objective:** Happenings can be created, read, edited and destroyed through
 the API.
 
-- [ ] create `Happening` model
-- [ ] seed the database with a small amount of test data
+- [x] create `Happening` model
+- [x] seed the database with a small amount of test data
 - [ ] CRUD API for happenings (`HappeningsController`)
 - [ ] jBuilder views for happenings
 - [ ] setup Webpack & Flux scaffold
