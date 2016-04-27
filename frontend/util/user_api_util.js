@@ -54,8 +54,6 @@ module.exports = {
   },
 
   handleError: function(error) {
-    console.log("handling Error: ");
-    console.log(error);
     AppDispatcher.dispatch({
       actionType: UserConstants.ERROR,
       errors: error.responseJSON.errors

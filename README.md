@@ -50,11 +50,11 @@ progress. Put an x between the brackets for a checkmark: [x] -->
 
 **Objective:** Functioning rails project with Authentication
 
-- [ ] create new project
-- [ ] create `User` model
-- [ ] authentication using BCrypt password digest algorithm
-- [ ] user signup/signin pages
-- [ ] blank landing page after signin
+- [x] create new project
+- [x] create `User` model
+- [x] authentication using BCrypt password digest algorithm
+- [x] user signup/signin pages
+- [x] blank landing page after signin
 
 ### Phase 2: Happenings Model, API, and basic APIUtil (1 days)
 

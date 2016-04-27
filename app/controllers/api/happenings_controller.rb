@@ -18,11 +18,12 @@ class Api::HappeningsController < ApplicationController
   def happening_params
     params.require(:happening).permit(
       :lat,
-      :lgn,
+      :lng,
       :title,
       :body,
       :date,
-      :user_id
+      :user_id,
+      :game
     )
   end
 end

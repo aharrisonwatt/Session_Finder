@@ -13,14 +13,14 @@ var HappeningApiUtil = {
     });
   },
 
-  createHappenings: function(happening){
+  createHappening: function(happening){
     $.ajax({
       url: "api/happenings",
       method: "POST",
-      data: {happeing: happening},
+      data: {happening: happening},
       success: function(newHappening){
         console.log(newHappening);
-        ServerActions.receiveSingleHappenings(newHappening);
+        ServerActions.receiveSingleHappening(newHappening);
       }
     });
   },
