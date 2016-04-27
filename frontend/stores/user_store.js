@@ -30,7 +30,7 @@ UserStore.currentUser = function(){
   return _currentUser;
 };
 
-UserStore.currentErrors = function(){
+UserStore.authErrors = function(){
   return _autherrors;
 };
 
