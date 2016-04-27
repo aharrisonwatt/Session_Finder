@@ -7,5 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Happening.create([
-  
+  { user_id: 1}, { date: DateTime.now}
   ])
