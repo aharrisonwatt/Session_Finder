@@ -34,7 +34,7 @@ var LoginForm = React.createClass({
       this.setState({ password: event.target.value});
     },
 
-    updateUsername: function(evetn){
+    updateUsername: function(event){
       this.setState({ username: event.target.value});
     },
 

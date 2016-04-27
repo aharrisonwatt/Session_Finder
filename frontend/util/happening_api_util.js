@@ -1,7 +1,7 @@
 var AppDispatcher = require('../dispatcher/dispatcher'),
     ServerActions = require('../actions/server_actions');
 
-module.exports = {
+var HappeningApiUtil = {
   fetchAllHappenings: function(){
     $.ajax({
       url: "api/happenings",
@@ -34,3 +34,7 @@ module.exports = {
   }
 
 };
+
+window.HappeningApiUtil = HappeningApiUtil;
+
+module.exports = HappeningApiUtil;
