@@ -2,7 +2,7 @@ var React = require("react");
 var UserActions = require("../actions/user_actions");
 var CurrentUserState = require("../mixins/current_user_state");
 
-var LoginForm = React.CreateClass({
+var LoginForm = React.createClass({
     mixins: [CurrentUserState],
 
     getInitialState: function(){
@@ -95,6 +95,8 @@ var LoginForm = React.CreateClass({
     },
 
     render: function(){
+      console.log("rending login-form");
+      console.log(this.state);
       return(
         <div id="login-form">
           {this.greeting}

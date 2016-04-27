@@ -1,4 +1,4 @@
-var UserApiUtil = require('../util/user_api_util');
+var UserApiUtil = require("../util/user_api_util");
 
 module.exports = {
   fetchCurrentUser: function(){

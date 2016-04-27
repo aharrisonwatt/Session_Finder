@@ -1,5 +1,6 @@
 var AppDispatcher = require('../dispatcher/dispatcher');
-var UserConstants = require('../constants/user_constants')
+var UserConstants = require('../constants/user_constants');
+
 module.exports = {
   fetchCurrentUser: function(){
     $.ajax({
@@ -26,6 +27,7 @@ module.exports = {
       method: "DELETE",
       success: this.removeCurrentUser(),
       error: this.handleError(error)
+    });
   },
 
   create: function(user){
