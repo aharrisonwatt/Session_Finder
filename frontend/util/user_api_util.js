@@ -6,8 +6,8 @@ module.exports = {
     $.ajax({
       url: "api/session",
       method: "GET",
-      success: this.recieveCurrentUser(user),
-      error: this.handleError(error)
+      success: this.recieveCurrentUser(),
+      error: this.handleError
     });
   },
 
@@ -17,7 +17,7 @@ module.exports = {
       type: "POST",
       data: { user: user},
       success: this.recieveCurrentUser(user),
-      error: this.handleError(error)
+      error: this.handleError
     });
   },
 
@@ -26,7 +26,7 @@ module.exports = {
       url: "api/session",
       method: "DELETE",
       success: this.removeCurrentUser(),
-      error: this.handleError(error)
+      error: this.handleError
     });
   },
 
@@ -36,7 +36,7 @@ module.exports = {
       type: "POST",
       data: { user: user},
       success: this.recieveCurrentUser(user),
-      error: this.handleError(error)
+      error: this.handleError
     });
   },
 
@@ -56,7 +56,7 @@ module.exports = {
   handleError: function(error) {
     AppDispatcher.dispatch({
       actionType: UserConstants.ERROR,
-      errors: error.responseJSON.errors
+      errors: error
     });
   }
 };

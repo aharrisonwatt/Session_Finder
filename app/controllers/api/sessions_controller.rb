@@ -1,3 +1,5 @@
+require 'byebug'
+
 class Api::SessionsController < ApplicationController
   def new
   end
@@ -13,7 +15,7 @@ class Api::SessionsController < ApplicationController
       render "api/users/show"
     else
       flash.now[:errors] = ["Invalid username or password"]
-      rrender "api/shared/error", status: 401
+      render "api/shared/error", status: 401
     end
   end
 
@@ -37,5 +39,5 @@ class Api::SessionsController < ApplicationController
 			render "api/shared/error", status: 404
 		end
 	end
-  
+
 end

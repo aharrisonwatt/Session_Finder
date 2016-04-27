@@ -1,9 +1,10 @@
 var React = require('react'),
-    LoginForm = require('./login_form');
+    LoginForm = require('./login_form'),
+    CurrentUserState = require('../mixins/current_user_state');
 
 
 var App = React.createClass({
-
+  mixins: [CurrentUserState],
   render: function() {
     return (
       <div>

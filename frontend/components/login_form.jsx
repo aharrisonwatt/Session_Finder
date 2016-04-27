@@ -27,11 +27,11 @@ var LoginForm = React.createClass({
     },
 
     updatePassword: function(event){
-      this.setState({ password: event.curretnTarget.value});
+      this.setState({ password: event.currentTarget.value});
     },
 
     updateUsername: function(evetn){
-      this.setState({ username: event.curretnTarget.value});
+      this.setState({ username: event.currentTarget.value});
     },
 
     greeting: function(){
@@ -72,17 +72,25 @@ var LoginForm = React.createClass({
         <form onSubmit={this.handleSubmit}>
           <section>
         		<label> Username:
-        			<input type="text" onChange={this.updateUsername}/>
+        			<input
+                type="text"
+                onChange={this.updateUsername}/>
         		</label>
 
         		<label> Password:
-        			<input type="password" onChange={this.updatePassword}/>
+        			<input
+                type="password"
+                onChange={this.updatePassword}/>
         		</label>
         	</section>
 
           <section>
             <label> Login
-              <input type="Radio" name="action" value="login" onChange={this.setForm}/>
+              <input
+                type="Radio"
+                name="action"
+                value="login"
+                onChange={this.setForm}/>
             </label>
             <label> Signup
               <input type="Radio" name="action" value="create" onChange={this.setForm}/>
@@ -95,13 +103,11 @@ var LoginForm = React.createClass({
     },
 
     render: function(){
-      console.log("rending login-form");
-      console.log(this.state);
       return(
         <div id="login-form">
-          {this.greeting}
-          {this.errors}
-          {this.form}
+          {this.greeting()}
+          {this.errors()}
+          {this.form()}
         </div>
       );
     }
