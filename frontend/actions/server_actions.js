@@ -7,6 +7,13 @@ var ServerActions = {
       actiontype: HappeningConstants.HAPPENINGS_RECIEVED,
       happenings: happenings
     });
+  },
+
+  receiveSingleHappening: function (happening){
+    AppDispatcher.dispatch({
+      actiontype: HappeningConstants.HAPPENING_RECIEVED,
+      happening: happening
+    });
   }
 };
 
