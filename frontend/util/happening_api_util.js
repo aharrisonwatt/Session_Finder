@@ -30,7 +30,6 @@ var HappeningApiUtil = {
       url: "api/happenings/" + id,
       method: "GET",
       success: function(happening){
-        console.log(happening);
         ServerActions.receiveSingleHappening(happening);
       }
     });

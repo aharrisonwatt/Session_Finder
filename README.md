@@ -55,6 +55,7 @@ progress. Put an x between the brackets for a checkmark: [x] -->
 - [x] authentication using BCrypt password digest algorithm
 - [x] user signup/signin pages
 - [x] blank landing page after signin
+- [ ] create guest LogIn
 
 ### Phase 2: Happenings Model, API, and basic APIUtil (1 days)
 
