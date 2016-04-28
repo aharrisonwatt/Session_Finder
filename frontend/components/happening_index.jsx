@@ -1,6 +1,7 @@
 var React = require('react'),
     ClientActions = require('../actions/client_actions'),
-    HappeningStore = require('../stores/happening_store');
+    HappeningStore = require('../stores/happening_store'),
+    HappeningIndexItem = require('./happening_index_item');
 
 var HappeningIndex = React.createClass({
 
@@ -28,11 +29,9 @@ var HappeningIndex = React.createClass({
         {
           Object.keys(happenings).map(function(happeningId){
             return (
-              <ul key={happeningId}> {happenings[happeningId].title}
-                <li>{happenings[happeningId].body}</li>
-                <li>{happenings[happeningId].game}</li>
-                <li>{happenings[happeningId].date}</li>
-              </ul>
+            <HappeningIndexItem
+              key={happeningId}
+              happening={happenings[happeningId]} />
             );
           })
         }
