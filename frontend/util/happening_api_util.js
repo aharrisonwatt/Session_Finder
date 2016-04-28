@@ -37,6 +37,4 @@ var HappeningApiUtil = {
 
 };
 
-window.HappeningApiUtil = HappeningApiUtil;
-
 module.exports = HappeningApiUtil;
