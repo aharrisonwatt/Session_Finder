@@ -18,3 +18,5 @@ Happening.create([
   { user_id: 1, date: DateTime.now, lat: 37.791657, lng: -122.467518,
     title: "Golf Course", body: "This one is a little random", game: "Legue of Legends"},
   ])
+
+User.create( { username: 'guest', password: 'password' })

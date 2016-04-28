@@ -38,6 +38,25 @@ var LoginForm = React.createClass({
       this.setState({ username: event.target.value});
     },
 
+    guestLoginButton: function(){
+      if(this.state.currentUser){
+        return;
+      }
+
+      return (
+        <div>
+          <button onClick={this.guestLogin}>Guest Login</button>
+        </div>
+      );
+    },
+
+    guestLogin: function(){
+      UserActions.login({
+        username: 'guest',
+        password: 'password'
+		  });
+    },
+
     greeting: function(){
       if(!this.state.currentUser){
         return;
@@ -118,6 +137,7 @@ var LoginForm = React.createClass({
           {this.greeting()}
           {this.errors()}
           {this.form()}
+          {this.guestLoginButton()}
         </div>
       );
     }
