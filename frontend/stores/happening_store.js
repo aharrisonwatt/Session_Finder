@@ -14,8 +14,12 @@ HappeningStore.__onDispatch = function (payload) {
       resetHappenings(payload.happenings);
       this.__emitChange();
       break;
+    case HappeningConstants.HAPPENING_RECIEVED:
+      addHappening(payload.happening);
+      this.__emitChange();
+      break;
   }
-
+};
 //Private Methods
 
 function resetHappenings(happenings){
@@ -25,4 +29,7 @@ function resetHappenings(happenings){
     _happenings[happening.id] = happening;
   });
 }
-};
+
+function addHappening(happening){
+  _happenings[happening.id] = happening;
+}
