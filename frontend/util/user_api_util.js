@@ -1,62 +1,39 @@
-var AppDispatcher = require('../dispatcher/dispatcher');
-var UserConstants = require('../constants/user_constants');
-
 module.exports = {
-  fetchCurrentUser: function(){
+  fetchCurrentUser: function(success, error){
     $.ajax({
       url: "api/session",
       method: "GET",
-      success: this.receiveCurrentUser,
-      error: this.handleError
+      success: success,
+      error: error
     });
   },
 
-  login: function(user){
+  login: function(user, success, error){
     $.ajax({
       url: "api/session",
       type: "POST",
       data: { user: user},
-      success: this.receiveCurrentUser,
-      error: this.handleError
+      success: success,
+      error: error
     });
   },
 
-  logout: function(){
+  logout: function(success, error){
     $.ajax({
       url: "api/session",
       method: "DELETE",
-      success: this.removeCurrentUser,
-      error: this.handleError
+      success: success,
+      error: error
     });
   },
 
-  create: function(user){
+  create: function(user, success, error){
     $.ajax({
       url: "api/user",
       type: "POST",
       data: { user: user},
-      success: this.receiveCurrentUser,
-      error: this.handleError
-    });
-  },
-
-  removeCurrentUser: function(user){
-    AppDispatcher.dispatch({
-      actionType: UserConstants.LOGOUT
-    });
-  },
-
-  receiveCurrentUser: function(user){
-    AppDispatcher.dispatch({
-      actionType: UserConstants.LOGIN,
-      user: user
-    });
-  },
-
-  handleError: function(error) {
-    AppDispatcher.dispatch({
-      actionType: UserConstants.ERROR,
-      errors: error.responseJSON.errors
+      success: success,
+      error: error
     });
   }
 };
