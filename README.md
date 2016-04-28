@@ -12,7 +12,7 @@ SessionFinder is a web application inspired by AirBnB. It will use Ruby on Rails
 - [ ] bug-free navigation
 - [ ] Adequate seed data to demonstrate the site's features
 - [ ] The minimally necessary features for an AirBnB-inspired site: Event Creation, Map integration showing location of events, filtering events based on a number of factors
-- [ ] Hosting on Heroku
+- [x] Hosting on Heroku
 - [ ] CSS styling that is satisfactorily visually appealing
 
 ## Product Goals and Priorities
