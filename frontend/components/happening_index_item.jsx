@@ -9,6 +9,7 @@ var HappeningIndexItem = React.createClass({
         title: {happening.title}
         body: {happening.body}
         game: {happening.game}
+        image: {happening.image}
       </div>
     );
   }

@@ -1,7 +1,8 @@
 var React = require('react'),
     LoginForm = require('./login_form'),
     CurrentUserState = require('../mixins/current_user_state'),
-    HappeningIndex = require('./happening_index');
+    HappeningIndex = require('./happening_index'),
+    Map = require('./map');
 
 
 var App = React.createClass({
@@ -10,7 +11,10 @@ var App = React.createClass({
   display: function() {
     if (this.state.currentUser){
       return (
-        <HappeningIndex />
+        <div>
+          <Map />
+          <HappeningIndex />
+        </div>
       );
     }
   },

@@ -29,9 +29,9 @@ var HappeningIndex = React.createClass({
         {
           Object.keys(happenings).map(function(happeningId){
             return (
-            <HappeningIndexItem
-              key={happeningId}
-              happening={happenings[happeningId]} />
+              <HappeningIndexItem
+                key={happeningId}
+                happening={happenings[happeningId]} />
             );
           })
         }
