@@ -1,4 +1,4 @@
-var AppDispatcher = require('../dispatcher/app_dispatcher'),
+var AppDispatcher = require('../dispatcher/dispatcher'),
     HappeningConstants = require('../constants/happening_constants');
 
 var ServerActions = {
