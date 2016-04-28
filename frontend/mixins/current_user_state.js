@@ -2,7 +2,7 @@ var UserStore = require('../stores/user_store.js'),
     UserActions = require('../actions/user_actions');
 
 module.exports = {
-  getInitialstate: function(){
+  getInitialState: function(){
     return(
       {
         currentUser: UserStore.currentUser(),

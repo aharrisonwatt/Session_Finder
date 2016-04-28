@@ -7,10 +7,6 @@ var React = require('react'),
 var App = React.createClass({
   mixins: [CurrentUserState],
 
-  getInitialState: function(){
-    return { };
-  },
-
   display: function() {
     if (this.state.currentUser){
       return (
