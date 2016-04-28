@@ -8,15 +8,15 @@
 
 Happening.create([
   { user_id: 1, date: DateTime.now, lat: 37.754936, lng: -122.427295,
-    title: "Watts Home", body: "This is where I grew up", game: "Street Fighter"},
+    title: "Watts Home", body: "This is where I grew up", game: "Street Fighter", image: 'image'},
   { user_id: 1, date: DateTime.now, lat: 37.769271, lng: -122.440138,
-    title: "Buena Vista Park", body: "A park", game: "Smash"},
+    title: "Buena Vista Park", body: "A park", game: "Smash", image: 'image'},
   { user_id: 1, date: DateTime.now, lat: 37.738529, lng: -122.453270,
-    title: "Under The Cross", body: "Not The Cross though", game: "Street Fighter"},
+    title: "Under The Cross", body: "Not The Cross though", game: "Street Fighter", image: 'image'},
   { user_id: 1, date: DateTime.now, lat: 37.743416, lng: -122.416019,
-    title: "??????", body: "WHERE AM I", game: "Mario Kart"},
+    title: "??????", body: "WHERE AM I", game: "Mario Kart", image: 'image'},
   { user_id: 1, date: DateTime.now, lat: 37.791657, lng: -122.467518,
-    title: "Golf Course", body: "This one is a little random", game: "Legue of Legends"},
+    title: "Golf Course", body: "This one is a little random", game: "Legue of Legends", image: 'image'},
   ])
 
 User.create( { username: 'guest', password: 'password' })
