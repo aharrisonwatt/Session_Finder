@@ -1,3 +1,3 @@
 class Happening < ActiveRecord::Base
-  validates :user_id, :date, :lat, :lng, :title, :body, presence: true
+  validates :user_id, :date, :lat, :lng, :title, :body, :image, presence: true
 end

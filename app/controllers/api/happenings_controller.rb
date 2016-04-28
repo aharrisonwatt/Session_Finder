@@ -23,7 +23,8 @@ class Api::HappeningsController < ApplicationController
       :body,
       :date,
       :user_id,
-      :game
+      :game,
+      :image
     )
   end
 end
