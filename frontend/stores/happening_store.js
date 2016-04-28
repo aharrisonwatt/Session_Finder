@@ -33,3 +33,5 @@ function resetHappenings(happenings){
 function addHappening(happening){
   _happenings[happening.id] = happening;
 }
+
+module.exports = HappeningStore;
