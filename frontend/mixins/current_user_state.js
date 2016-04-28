@@ -12,14 +12,14 @@ module.exports = {
   },
 
   componentDidMount: function() {
-    UserStore.addListener(this.updateUser);
+    this.listenerToken = UserStore.addListener(this.updateUser);
     if (typeof UserStore.currentUser() === 'undefined'){
       UserActions.fetchCurrentUser();
     }
   },
 
   componentWillUnmount: function() {
-
+    this.listenerToken.remove();
   },
 
   updateUser: function() {

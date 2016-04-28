@@ -7,12 +7,24 @@ var React = require('react'),
 var App = React.createClass({
   mixins: [CurrentUserState],
 
+  getInitialState: function(){
+    return { };
+  },
+
+  display: function() {
+    if (this.state.currentUser){
+      return (
+        <HappeningIndex />
+      );
+    }
+  },
+
   render: function() {
     return (
       <div>
         <header><h1>Session Finder</h1></header>
         <LoginForm />
-        <HappeningIndex />
+        {this.display()}
         {this.props.children}
       </div>
     );
