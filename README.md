@@ -22,8 +22,8 @@ SessionFinder will allow users to do the following:
 <!-- This is a Markdown checklist. Use it to keep track of your
 progress. Put an x between the brackets for a checkmark: [x] -->
 
-- [ ] Create an account (MVP)
-- [ ] Log in / Log out, including as a Guest/Demo User (MVP)
+- [x] Create an account (MVP)
+- [x] Log in / Log out, including as a Guest/Demo User (MVP)
 - [ ] Create events (MVP)
 - [ ] View events(MVP)
 - [ ] Comment/review event (expected but not MVP)
@@ -55,7 +55,7 @@ progress. Put an x between the brackets for a checkmark: [x] -->
 - [x] authentication using BCrypt password digest algorithm
 - [x] user signup/signin pages
 - [x] blank landing page after signin
-- [ ] create guest LogIn
+- [x] create guest LogIn
 
 ### Phase 2: Happenings Model, API, and basic APIUtil (1 days)
 
@@ -78,8 +78,8 @@ user interface.
 - [ ] setup the flux loop with skeleton files
 - [ ] setup React Router
 - implement each happening component, building out the flux loop as needed.
-  - [ ] `HappeningsIndex`
-  - [ ] `HappeningIndexItem`
+  - [x] `HappeningsIndex`
+  - [x] `HappeningIndexItem`
   - [ ] `HappeningForm`
   - [ ] `NavBar`
 
