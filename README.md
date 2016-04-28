@@ -88,9 +88,9 @@ user interface.
 **Objective:** Map is integrated with the page and shows where Happenings
 are planned.
 
-- [ ] Research how to do map integration
-- [ ] ????
-- [ ] Make map
+- [x] Research how to do map integration
+- [x] ????
+- [x] Make map
 
 ### Phase 5: Start Styling (0.5 days)
 

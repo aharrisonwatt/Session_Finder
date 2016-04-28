@@ -5,8 +5,15 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <script src="http://widget.cloudinary.com/global/all.js" type="text/javescript"></script>
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSNGbNO6tq4q7eNcduj5DVh-tFCg-5zvc">
+  </script>
+  <script type="text/javascript">
+    window.cloudinary_options = {
+      cloud_name: '<%= ENV['CLOUD_NAME'] %>'
+      upload_presets: '<%= ENV['UPLOAD_PRESETS'] %>'
+    };
   </script>
 </head>
 <body>
