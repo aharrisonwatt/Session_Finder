@@ -1,4 +1,4 @@
-var AppDispatcher = require('../dispatcher/dispatcher'),
+var AppDispatcher = require('../dispatcher/app_dispatcher'),
     ServerActions = require('../actions/server_actions');
 
 var HappeningApiUtil = {
