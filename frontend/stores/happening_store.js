@@ -20,6 +20,10 @@ HappeningStore.__onDispatch = function (payload) {
       break;
   }
 };
+
+HappeningStore.all = function(){
+  return Object.assign({}, _happenings);
+};
 //Private Methods
 
 function resetHappenings(happenings){

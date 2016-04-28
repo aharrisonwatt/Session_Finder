@@ -1,6 +1,4 @@
-var HappeningConstants = {
+module.exports = {
   HAPPENINGS_RECIEVED: "HAPPENINGS_RECIEVED",
   HAPPENING_RECIEVED: "HAPPENING_RECIEVED"
 };
-
-module.exports = HappeningConstants;

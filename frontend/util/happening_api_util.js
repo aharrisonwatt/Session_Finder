@@ -7,7 +7,6 @@ var HappeningApiUtil = {
       url: "api/happenings",
       method: "GET",
       success: function(happenings){
-        console.log(happenings);
         ServerActions.receiveAllHappenings(happenings);
       }
     });
@@ -19,7 +18,6 @@ var HappeningApiUtil = {
       method: "POST",
       data: {happening: happening},
       success: function(newHappening){
-        console.log(newHappening);
         ServerActions.receiveSingleHappening(newHappening);
       }
     });

@@ -14,6 +14,7 @@ var HappeningIndex = React.createClass({
 
   componentDidMount: function () {
     this.happeningListener = HappeningStore.addListener(this._onChange);
+    ClientActions.fetchAllHappenings();
   },
 
   componentWillUnmount: function () {
@@ -22,7 +23,6 @@ var HappeningIndex = React.createClass({
 
   render: function() {
     var happenings = this.state.happenings;
-
     return (
       <div className="happening-index">
         {

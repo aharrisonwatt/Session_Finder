@@ -4,14 +4,14 @@ var AppDispatcher = require('../dispatcher/dispatcher'),
 var ServerActions = {
   receiveAllHappenings: function (happenings){
     AppDispatcher.dispatch({
-      actiontype: HappeningConstants.HAPPENINGS_RECIEVED,
+      actionType: HappeningConstants.HAPPENINGS_RECIEVED,
       happenings: happenings
     });
   },
 
   receiveSingleHappening: function (happening){
     AppDispatcher.dispatch({
-      actiontype: HappeningConstants.HAPPENING_RECIEVED,
+      actionType: HappeningConstants.HAPPENING_RECIEVED,
       happening: happening
     });
   }
