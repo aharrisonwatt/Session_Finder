@@ -65,9 +65,9 @@ the API.
 - [x] seed the database with a small amount of test data
 - [x] CRUD API for happenings (`HappeningsController`)
 - [x] jBuilder views for happenings
-- [ ] setup Webpack & Flux scaffold
-- [ ] setup `APIUtil` to interact with the API
-- [ ] test out API interaction in the console.
+- [x] setup Webpack & Flux scaffold
+- [x] setup `APIUtil` to interact with the API
+- [x] test out API interaction in the console.
 
 ### Phase 3: Flux Architecture and Router (1.5 days)
 
