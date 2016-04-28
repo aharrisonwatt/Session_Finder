@@ -16,6 +16,10 @@ module.exports = React.createClass({
         zoom: 12
       };
       this.map = new google.maps.Map(mapDOMNode, mapOptions);
+      this.regesterListeners();
+    },
+
+    regesterListeners: function(){
       var map = this.map;
       this.map.addListener('idle', function() {
         var bounds = {};

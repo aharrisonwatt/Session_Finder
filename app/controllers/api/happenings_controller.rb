@@ -1,6 +1,9 @@
 class Api::HappeningsController < ApplicationController
   def index
     @happenings = Happening.all
+    if(bounds)
+      @happenings = Happening.in_bounds(bounds)
+    end
     render 'index'
   end
 
@@ -26,5 +29,9 @@ class Api::HappeningsController < ApplicationController
       :game,
       :image
     )
+  end
+
+  def bounds
+    params[:bounds]
   end
 end
