@@ -2,10 +2,11 @@ var AppDispatcher = require('../dispatcher/dispatcher'),
     ServerActions = require('../actions/server_actions');
 
 var HappeningApiUtil = {
-  fetchAllHappenings: function(){
+  fetchAllHappenings: function(bounds){
     $.ajax({
       url: "api/happenings",
       method: "GET",
+      data: {bounds: bounds},
       success: function(happenings){
         ServerActions.receiveAllHappenings(happenings);
       }

@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 var HappeningStore = require('../stores/happening_store'),
     ClientActions = require('../actions/client_actions');
 
@@ -10,22 +11,31 @@ module.exports = React.createClass({
 
   componentDidMount: function(){
       this.happeningListener = HappeningStore.addListener(this._onChange);
-      var mapDOMNode = this.refs.map;
+      var map = ReactDOM.findDOMNode(this.refs.map);
       var mapOptions = {
         center: {lat: 37.7758, lng: -122.435},
         zoom: 12
       };
-      this.map = new google.maps.Map(mapDOMNode, mapOptions);
-      this.regesterListeners();
+      this.map = new google.maps.Map(map, mapOptions);
+      this.registerListeners();
     },
 
-    regesterListeners: function(){
-      var map = this.map;
+    registerListeners: function(){
       this.map.addListener('idle', function() {
-        var bounds = {};
-        bounds['northEast'] = (map.getBounds().getNorthEast());
-        bounds['southWest'] = (map.getBounds().getSouthWest());
-        ClientActions.fetchAllHappenings(bounds);
+        var bounds = this.getBounds();
+        var boundsNorthEast = {
+          lat: bounds.getNorthEast().lat(),
+          lng: bounds.getNorthEast().lng()
+        };
+        var boundsSouthWest = {
+          lat: bounds.getSouthWest().lat(),
+          lng: bounds.getSouthWest().lng()
+        };
+
+        ClientActions.fetchAllHappenings({
+          southWest: boundsSouthWest,
+          northEast: boundsNorthEast
+        });
       });
     },
 

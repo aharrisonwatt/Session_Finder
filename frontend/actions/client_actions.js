@@ -1,8 +1,8 @@
 var HappeningApiUtil = require('../util/happening_api_util');
 
 var ClientActions = {
-  fetchAllHappenings: function(){
-    HappeningApiUtil.fetchAllHappenings();
+  fetchAllHappenings: function(bounds){
+    HappeningApiUtil.fetchAllHappenings(bounds);
   },
 
   fetchSingleHappening: function(id){
