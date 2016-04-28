@@ -7,7 +7,6 @@ var _currentUser;
 var _autherrors;
 
 
-
 //API
 UserStore.__onDispatch = function (payload) {
   switch (payload.actionType) {
