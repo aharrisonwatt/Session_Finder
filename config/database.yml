@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: Capstone_project_production
-  username: Capstone_project
-  password: <%= ENV['CAPSTONE_PROJECT_DATABASE_PASSWORD'] %>
