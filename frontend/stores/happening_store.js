@@ -24,6 +24,10 @@ HappeningStore.__onDispatch = function (payload) {
 HappeningStore.all = function(){
   return Object.assign({}, _happenings);
 };
+
+HappeningStore.find = function(happeningId){
+  return _happenings[happeningId];
+};
 //Private Methods
 
 function resetHappenings(happenings){

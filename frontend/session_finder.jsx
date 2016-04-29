@@ -10,11 +10,14 @@ var ReactRouter = require('react-router'),
     hashHistory = ReactRouter.hashHistory;
 
 //componets
-var App = require('./components/app');
+var App = require('./components/app'),
+    HappeningShow = require('./components/happening_show');
 
 var Routes = (
   <Router history={hashHistory}>
-    <Route path="/" component={App} />
+    <Route path="/" component={App}>
+      <Route path="/happenings/:happeningid" component={HappeningShow} />
+    </Route>
   </Router>
 );
 
