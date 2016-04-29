@@ -1,7 +1,7 @@
 var React = require('react'),
     LoginForm = require('./login_form');
 
-var NavBar = require('react-bootstrap').NavBar;
+// var NavBar = require('react-bootstrap').NavBar;
 
 var NavigationBar = React.createClass({
 
