@@ -5,7 +5,10 @@ var NavBar = React.createClass({
 
   render: function() {
     return (
-      <div />
+      <div  className='navbar' >
+        <h1>Session Finder</h1>
+        <LoginForm />
+      </div>
     );
   }
 

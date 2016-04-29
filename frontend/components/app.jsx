@@ -1,5 +1,5 @@
 var React = require('react'),
-    LoginForm = require('./login_form'),
+    Navbar = require('./navbar'),
     CurrentUserState = require('../mixins/current_user_state'),
     HappeningIndex = require('./happening_index'),
     Map = require('./map');
@@ -11,9 +11,9 @@ var App = React.createClass({
   display: function() {
     if (this.state.currentUser){
       return (
-        <div>
-          <Map />
+        <div className="body">
           <HappeningIndex />
+          <Map />
         </div>
       );
     }
@@ -22,8 +22,7 @@ var App = React.createClass({
   render: function() {
     return (
       <div>
-        <header><h1>Session Finder</h1></header>
-        <LoginForm />
+        <Navbar />
         {this.display()}
         {this.props.children}
       </div>

@@ -124,16 +124,16 @@ var LoginForm = React.createClass({
                 value="create"
                 onChange={this.setForm}/>
             </label>
-          </section>
-
           <input type="Submit"/>
-        </form>
+        </section>
+
+      </form>
       );
     },
 
     render: function(){
       return(
-        <div id="login-form">
+        <div className="login-form">
           {this.greeting()}
           {this.errors()}
           {this.form()}

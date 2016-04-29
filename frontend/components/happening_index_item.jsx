@@ -5,10 +5,12 @@ var HappeningIndexItem = React.createClass({
   render: function() {
     var happening = this.props.happening;
     return (
-      <div>{happening.title}
-        <li>{happening.body}</li>
-        <li>{happening.game}</li>
-        <img src={happening.image}/>
+      <div className='index-item'>{happening.title}
+        <img className='index-image' src={happening.image}/>
+        <div>
+          <li>{happening.body}</li>
+          <li>{happening.game}</li>
+        </div>
       </div>
     );
   }
