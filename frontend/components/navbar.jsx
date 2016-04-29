@@ -1,7 +1,9 @@
 var React = require('react'),
     LoginForm = require('./login_form');
 
-var NavBar = React.createClass({
+var NavBar = require('react-bootstrap').NavBar;
+
+var NavigationBar = React.createClass({
 
   render: function() {
     return (
@@ -14,4 +16,4 @@ var NavBar = React.createClass({
 
 });
 
-module.exports = NavBar;
+module.exports = NavigationBar;
