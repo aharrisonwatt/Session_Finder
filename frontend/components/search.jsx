@@ -1,11 +1,13 @@
 var React = require('react'),
-    Navbar = require('./navbar'),
+    HappeningStore = require('../stores/happening_store'),
+    ClientActions = require('../actions/client_actions'),
     CurrentUserState = require('../mixins/current_user_state'),
     HappeningIndex = require('./happening_index'),
+    UserStore = require('../stores/user_store'),
     Map = require('./map');
 
 
-var App = React.createClass({
+var Search = React.createClass({
   mixins: [CurrentUserState],
 
   display: function() {
@@ -20,16 +22,13 @@ var App = React.createClass({
   },
 
   render: function() {
-    console.log(this.state.currentUser);
     return (
       <div>
-        <Navbar />
         {this.display()}
-        {this.props.children}
       </div>
     );
   }
 
 });
 
-module.exports = App;
+module.exports = Search;

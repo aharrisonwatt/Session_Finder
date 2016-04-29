@@ -11,6 +11,8 @@ var _happenings = {};
 HappeningStore.__onDispatch = function (payload) {
   switch (payload.actionType) {
     case HappeningConstants.HAPPENINGS_RECIEVED:
+      console.log("Happenings Recieved: ");
+      console.log(payload.happenings);
       resetHappenings(payload.happenings);
       this.__emitChange();
       break;
@@ -42,4 +44,5 @@ function addHappening(happening){
   _happenings[happening.id] = happening;
 }
 
+window.HP = HappeningStore;
 module.exports = HappeningStore;

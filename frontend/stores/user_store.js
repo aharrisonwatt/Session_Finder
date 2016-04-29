@@ -35,13 +35,13 @@ UserStore.authErrors = function(){
 
 //private methods
 function logout(){
-  _currentUser = null;
-  _autherrors = null;
+  _currentUser = undefined;
+  _autherrors = undefined;
 }
 
 function login(user){
   _currentUser = user;
-  _autherrors = null;
+  _autherrors = undefined;
 }
 
 function handleError(error){
