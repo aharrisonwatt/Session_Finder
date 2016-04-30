@@ -26,16 +26,24 @@ lat         | float     | not null
 lng         | float     | not null
 title       | string    | not null
 body        | text      | not null
+game        | string    | not null
 
 ## tags
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-name        | string    | not null
+name        | string    | not null, indexed
 
 ## taggings
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-happening_id| integer   | not null, foreign key (references notes), indexed, unique [tag_id]
+happening_id| integer   | not null, foreign key (references happening), indexed, unique [tag_id]
 tag_id      | integer   | not null, foreign key (references tags), indexed
+
+## images
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+happening_id| integer   | not null, foreign key (references happening), indexed, unique [tag_id]
+image_url   | string    | not null, indexed
