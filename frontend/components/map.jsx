@@ -32,8 +32,7 @@ module.exports = React.createClass({
           lng: bounds.getSouthWest().lng()
         };
 
-        console.log("Map is fetching Happenings");
-        ClientActions.fetchAllHappenings({  
+        ClientActions.fetchAllHappenings({
           southWest: boundsSouthWest,
           northEast: boundsNorthEast
         });

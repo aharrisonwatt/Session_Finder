@@ -27,4 +27,23 @@ Image.create([
   { happening_id: 5, image_url: 'http://res.cloudinary.com/awatt/image/upload/v1461886410/CEO_FGC_pnjhpt.jpg'},
   ])
 
+Tag.create([
+  { name: 'Street Fighter V'},
+  { name: 'SSMB'},
+  { name: 'Smash 4'},
+  { name: 'Mortal Combat'},
+  { name: 'Pokkén'},
+  ])
+
+Tagging.create([
+  { happening_id: 1, tag_id: 1},
+  { happening_id: 1, tag_id: 3},
+  { happening_id: 2, tag_id: 1},
+  { happening_id: 2, tag_id: 5},
+  { happening_id: 3, tag_id: 3},
+  { happening_id: 4, tag_id: 4},
+  { happening_id: 4, tag_id: 1},
+  { happening_id: 5, tag_id: 2},
+  ])
+
 User.create( { username: 'guest', password: 'password' })

@@ -14,7 +14,6 @@ var HappeningIndex = React.createClass({
   },
 
   componentDidMount: function () {
-    console.log("Happeing_index Mounting");
     this.happeningListener = HappeningStore.addListener(this._onChange);
     ClientActions.fetchAllHappenings();
   },
