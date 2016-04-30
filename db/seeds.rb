@@ -8,15 +8,15 @@
 
 Happening.create([
   { user_id: 1, date: DateTime.now, lat: 37.754936, lng: -122.427295,
-    title: "Watts Home", body: "This is where I grew up", game: "Street Fighter"},
+    title: "Watts Home", body: "This is where I grew up"},
   { user_id: 1, date: DateTime.now, lat: 37.769271, lng: -122.440138,
-    title: "Buena Vista Park", body: "A park", game: "Smash"},
+    title: "Buena Vista Park", body: "A park"},
   { user_id: 1, date: DateTime.now, lat: 37.738529, lng: -122.453270,
-    title: "Under The Cross", body: "Not The Cross though", game: "Street Fighter"},
+    title: "Under The Cross", body: "Not The Cross though"},
   { user_id: 1, date: DateTime.now, lat: 37.743416, lng: -122.416019,
-    title: "??????", body: "WHERE AM I", game: "Mario Kart"},
+    title: "??????", body: "WHERE AM I"},
   { user_id: 1, date: DateTime.now, lat: 37.791657, lng: -122.467518,
-    title: "Golf Course", body: "This one is a little random", game: "Legue of Legends"},
+    title: "Golf Course", body: "This one is a little random"},
   ])
 
 Image.create([
@@ -26,4 +26,5 @@ Image.create([
   { happening_id: 4, image_url: 'http://res.cloudinary.com/awatt/image/upload/v1461886409/DSC_5325_tnh5hy.jpg'},
   { happening_id: 5, image_url: 'http://res.cloudinary.com/awatt/image/upload/v1461886410/CEO_FGC_pnjhpt.jpg'},
   ])
+
 User.create( { username: 'guest', password: 'password' })
