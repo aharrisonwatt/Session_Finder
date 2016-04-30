@@ -11,11 +11,13 @@ var ReactRouter = require('react-router'),
 
 //componets
 var App = require('./components/app'),
-    HappeningShow = require('./components/happening_show');
+    HappeningShow = require('./components/happening_show'),
+    Search = require('./components/search');
 
 var Routes = (
   <Router history={hashHistory}>
     <Route path="/" component={App}>
+      <IndexRoute component={Search} />
       <Route path="/happenings/:happeningid" component={HappeningShow} />
     </Route>
   </Router>

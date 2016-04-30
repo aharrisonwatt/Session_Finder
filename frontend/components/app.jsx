@@ -8,22 +8,10 @@ var React = require('react'),
 var App = React.createClass({
   mixins: [CurrentUserState],
 
-  display: function() {
-    if (this.state.currentUser){
-      return (
-        <div className="body">
-          <HappeningIndex />
-          <Map />
-        </div>
-      );
-    }
-  },
-
   render: function() {
     return (
       <div>
         <Navbar />
-        {this.display()}
         {this.props.children}
       </div>
     );
