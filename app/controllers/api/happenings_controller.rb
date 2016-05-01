@@ -1,9 +1,15 @@
+require 'byebug'
 class Api::HappeningsController < ApplicationController
   def index
     @happenings = Happening.all
     if(bounds)
       @happenings = Happening.in_bounds(bounds)
     end
+
+    if (params[:tags])
+      @happening = Happening.has_tag(params[:tags])
+    end
+
     render 'index'
   end
 
@@ -27,7 +33,8 @@ class Api::HappeningsController < ApplicationController
       :date,
       :user_id,
       :game,
-      :image
+      :image,
+      :tags
     )
   end
 

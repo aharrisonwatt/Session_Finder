@@ -13,6 +13,18 @@ var HappeningApiUtil = {
     });
   },
 
+  fetchAllHappeningsWithTags: function(tags){
+    $.ajax({
+      url: "api/happenings",
+      method: "GET",
+      data: {tags: tags},
+      success: function(happenings){
+        debugger;
+        ServerActions.receiveAllHappenings(happenings);
+      }
+    });
+  },
+
   createHappening: function(happening){
     $.ajax({
       url: "api/happenings",
@@ -36,4 +48,5 @@ var HappeningApiUtil = {
 
 };
 
+window.HappingAPI = HappeningApiUtil;
 module.exports = HappeningApiUtil;
