@@ -2,7 +2,7 @@ var AppDispatcher = require('../dispatcher/dispatcher'),
     ServerActions = require('../actions/server_actions');
 
 var HappeningApiUtil = {
-  //update this to take bounds and filters
+
   fetchAllHappenings: function(bounds, filters){
     $.ajax({
       url: "api/happenings",

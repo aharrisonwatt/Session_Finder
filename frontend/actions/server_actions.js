@@ -1,5 +1,6 @@
 var AppDispatcher = require('../dispatcher/dispatcher'),
-    HappeningConstants = require('../constants/happening_constants');
+    HappeningConstants = require('../constants/happening_constants'),
+    TagConstants = require('../constants/tag_constants');
 
 var ServerActions = {
   receiveAllHappenings: function (happenings){
@@ -13,6 +14,13 @@ var ServerActions = {
     AppDispatcher.dispatch({
       actionType: HappeningConstants.HAPPENING_RECIEVED,
       happening: happening
+    });
+  },
+
+  receiveAllTags: function (tags){
+    AppDispatcher.dispatch({
+      actionType: TagConstants.TAGS_RECIEVED,
+      tags: tags
     });
   }
 };
