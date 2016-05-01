@@ -24,10 +24,10 @@ var HappeningIndexFilter = React.createClass({
   updateFilter: function() {
 
   },
-  
+
   render: function() {
-    var tags = this.state.tags.map(function(tag){
-      return <button onClick={this.updateFilter}>{tag}</button>;
+    var tags = this.state.tags.map(function(tag, index){
+      return <button key={index} onClick={this.updateFilter}>{tag}</button>;
     });
     return (
       <div>
@@ -39,5 +39,3 @@ var HappeningIndexFilter = React.createClass({
 });
 
 module.exports = HappeningIndexFilter;
-
-//in order to make this less bri

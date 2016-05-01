@@ -28,7 +28,7 @@ function resetTags(tags){
   _tags = [];
 
   tags.forEach(function(tag){
-    _tags.push(tag);
+    _tags.push(tag.name);
   });
 }
 

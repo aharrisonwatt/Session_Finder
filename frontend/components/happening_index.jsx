@@ -1,7 +1,8 @@
 var React = require('react'),
     ClientActions = require('../actions/client_actions'),
     HappeningStore = require('../stores/happening_store'),
-    HappeningIndexItem = require('./happening_index_item');
+    HappeningIndexItem = require('./happening_index_item'),
+    HappeningIndexFilter = require('./happening_index_filter');
 
 var HappeningIndex = React.createClass({
 
@@ -26,6 +27,7 @@ var HappeningIndex = React.createClass({
     var happenings = this.state.happenings;
     return (
       <div className="happening-index">
+        <HappeningIndexFilter />
         {
           Object.keys(happenings).map(function(happeningId){
             return (
