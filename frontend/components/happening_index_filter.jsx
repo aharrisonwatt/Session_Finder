@@ -1,6 +1,7 @@
 var React = require('react'),
     TagStore = require('../stores/tag_store'),
-    ClientActions = require('../actions/client_actions');
+    ClientActions = require('../actions/client_actions'),
+    CurrentFilterState = require('../helpers/current_filter_state');
 
 var HappeningIndexFilter = React.createClass({
 
@@ -21,13 +22,15 @@ var HappeningIndexFilter = React.createClass({
     this.tagListener.remove();
   },
 
-  updateFilter: function() {
-
+  updateFilter: function(event) {
+    event.preventDefault();
+    CurrentFilterState.setFilters(event.currentTarget.value);
   },
 
   render: function() {
+    var that = this;
     var tags = this.state.tags.map(function(tag, index){
-      return <button key={index} onClick={this.updateFilter}>{tag}</button>;
+      return <button key={index} onClick={that.updateFilter} value={tag}>{tag}</button>;
     });
     return (
       <div>

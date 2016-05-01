@@ -8,8 +8,6 @@ var _tags = [];
 //API
 
 TagStore.__onDispatch = function (payload) {
-  console.log('TagStore payload: ');
-  console.log(payload);
   switch (payload.actionType) {
     case TagConstants.TAGS_RECIEVED:
       resetTags(payload.tags);

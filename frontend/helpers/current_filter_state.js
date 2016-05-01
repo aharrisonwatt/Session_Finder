@@ -11,8 +11,12 @@ module.exports = {
     this.updateStore();
   },
 
-  setFilters: function(newFilters){
-    filters = newFilters;
+  setFilters: function(newFilter){
+    if(filters[newFilter] === true){
+      filters[newFilter] = false;
+    }else{
+      filters[newFilter] = true;
+    }
     this.updateStore();
   },
 

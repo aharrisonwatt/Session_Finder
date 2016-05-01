@@ -9,8 +9,6 @@ var _happenings = {};
 //API
 
 HappeningStore.__onDispatch = function (payload) {
-  console.log('HapeningStore payload: ');
-  console.log(payload);
   switch (payload.actionType) {
     case HappeningConstants.HAPPENINGS_RECIEVED:
       resetHappenings(payload.happenings);
