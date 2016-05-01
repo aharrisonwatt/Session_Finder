@@ -1,7 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var HappeningStore = require('../stores/happening_store'),
-    ClientActions = require('../actions/client_actions');
+    CurrentFilterState = require('../helpers/current_filter_state');
 
 module.exports = React.createClass({
 
@@ -31,9 +31,9 @@ module.exports = React.createClass({
           lat: bounds.getSouthWest().lat(),
           lng: bounds.getSouthWest().lng()
         };
-        
+
         //instead of clientactions new component
-        ClientActions.fetchAllHappenings({
+        CurrentFilterState.setBounds({
           southWest: boundsSouthWest,
           northEast: boundsNorthEast
         });
