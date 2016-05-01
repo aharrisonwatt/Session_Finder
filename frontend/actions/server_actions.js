@@ -18,6 +18,10 @@ var ServerActions = {
   },
 
   receiveAllTags: function (tags){
+    console.log('Server Actions Dispatching Tags: ');
+    console.log(tags);
+    console.log('Action Type: ');
+    console.log(TagConstants.TAGS_RECIEVED);
     AppDispatcher.dispatch({
       actionType: TagConstants.TAGS_RECIEVED,
       tags: tags
