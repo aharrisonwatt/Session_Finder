@@ -31,7 +31,8 @@ module.exports = React.createClass({
           lat: bounds.getSouthWest().lat(),
           lng: bounds.getSouthWest().lng()
         };
-
+        
+        //instead of clientactions new component
         ClientActions.fetchAllHappenings({
           southWest: boundsSouthWest,
           northEast: boundsNorthEast

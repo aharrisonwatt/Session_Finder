@@ -2,24 +2,16 @@ var AppDispatcher = require('../dispatcher/dispatcher'),
     ServerActions = require('../actions/server_actions');
 
 var HappeningApiUtil = {
-  fetchAllHappenings: function(bounds){
+  //update this to take bounds and filters
+  fetchAllHappenings: function(bounds, filters){
     $.ajax({
       url: "api/happenings",
       method: "GET",
-      data: {bounds: bounds},
+      data: {
+        bounds: bounds,
+        filters: filters
+      },
       success: function(happenings){
-        ServerActions.receiveAllHappenings(happenings);
-      }
-    });
-  },
-
-  fetchAllHappeningsWithTags: function(tags){
-    $.ajax({
-      url: "api/happenings",
-      method: "GET",
-      data: {tags: tags},
-      success: function(happenings){
-        debugger;
         ServerActions.receiveAllHappenings(happenings);
       }
     });
@@ -48,5 +40,4 @@ var HappeningApiUtil = {
 
 };
 
-window.HappingAPI = HappeningApiUtil;
 module.exports = HappeningApiUtil;
