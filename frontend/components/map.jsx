@@ -15,15 +15,15 @@ module.exports = React.createClass({
   },
 
   componentDidMount: function(){
-      this.happeningListener = HappeningStore.addListener(this._onChange);
-      var map = ReactDOM.findDOMNode(this.refs.map);
-      var mapOptions = {
-        center: {lat: 37.7758, lng: -122.435},
-        zoom: 12
-      };
-      this.map = new google.maps.Map(map, mapOptions);
-      this.registerListeners();
-    },
+    this.happeningListener = HappeningStore.addListener(this._onChange);
+    var map = ReactDOM.findDOMNode(this.refs.map);
+    var mapOptions = {
+      center: {lat: 37.7758, lng: -122.435},
+      zoom: 12
+    };
+    this.map = new google.maps.Map(map, mapOptions);
+    this.registerListeners();
+  },
 
   registerListeners: function(){
     this.map.addListener('idle', function() {
