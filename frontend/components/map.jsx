@@ -72,7 +72,7 @@ module.exports = React.createClass({
 
     var markers = Object.keys(happenings).map(function(happeningId){
       var happening = happenings[happeningId];
-      var myLatlng = new google.maps.LatLng(happening.lat,happening.lng);
+      var myLatlng = new google.maps.LatLng(happening.lat, happening.lng);
       var marker = new google.maps.Marker({
           position: myLatlng,
           title: happening.title,

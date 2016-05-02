@@ -12,7 +12,8 @@ var ReactRouter = require('react-router'),
 //componets
 var App = require('./components/app'),
     HappeningShow = require('./components/happening_show'),
-    Search = require('./components/search');
+    Search = require('./components/search'),
+    HappeningForm = require('./components/happening_form');
 
 var Routes = (
   <Router history={hashHistory}>
@@ -20,6 +21,7 @@ var Routes = (
       <IndexRoute component={Search} />
       <Route path="/happenings" component={Search} />
       <Route path="/happenings/:happeningid" component={HappeningShow} />
+      <Route path="/happeningform" component={HappeningForm} />
     </Route>
   </Router>
 );
