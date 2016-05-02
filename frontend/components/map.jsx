@@ -3,6 +3,8 @@ var ReactDOM = require('react-dom');
 var HappeningStore = require('../stores/happening_store'),
     CurrentFilterState = require('../helpers/current_filter_state');
 
+var markersArray = [];
+
 module.exports = React.createClass({
 
   getInitialState: function(){
@@ -20,54 +22,68 @@ module.exports = React.createClass({
       this.registerListeners();
     },
 
-    registerListeners: function(){
-      this.map.addListener('idle', function() {
-        var bounds = this.getBounds();
-        var boundsNorthEast = {
-          lat: bounds.getNorthEast().lat(),
-          lng: bounds.getNorthEast().lng()
-        };
-        var boundsSouthWest = {
-          lat: bounds.getSouthWest().lat(),
-          lng: bounds.getSouthWest().lng()
-        };
+  registerListeners: function(){
+    this.map.addListener('idle', function() {
+      var bounds = this.getBounds();
+      var boundsNorthEast = {
+        lat: bounds.getNorthEast().lat(),
+        lng: bounds.getNorthEast().lng()
+      };
+      var boundsSouthWest = {
+        lat: bounds.getSouthWest().lat(),
+        lng: bounds.getSouthWest().lng()
+      };
 
-        //instead of clientactions new component
-        CurrentFilterState.setBounds({
-          southWest: boundsSouthWest,
-          northEast: boundsNorthEast
-        });
+      //instead of clientactions new component
+      CurrentFilterState.setBounds({
+        southWest: boundsSouthWest,
+        northEast: boundsNorthEast
       });
-    },
+    });
+  },
 
-    componentWillUnmount: function () {
-      this.happeningListener.remove();
-    },
+  componentWillUnmount: function () {
+    this.happeningListener.remove();
+  },
 
-    _onChange: function(){
-      this.setState( {happenings: HappeningStore.all()});
-    },
+  _onChange: function(){
+    this.setState( {happenings: HappeningStore.all()});
+  },
 
-    addMarkers: function () {
-      var happenings = this.state.happenings;
-      var that = this;
+  clearOverlays: function(){
+    for (var i = 0; i < markersArray.length; i++) {
+      markersArray[i].setMap(null);
+    }
+    markersArray = [];
+  },
 
-      Object.keys(happenings).map(function(happeningId){
-        var happening = happenings[happeningId];
-        var myLatlng = new google.maps.LatLng(happening.lat,happening.lng);
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            title: happening.title
-            });
-        return (
-          marker.setMap(that.map)
-        );
-      });
-    },
+  setMarkers: function(){
+    for (var i = 0; i < markersArray.length; i++) {
+      markersArray[i].setMap(this.map);
+    }
+  },
+
+  addMarkers: function () {
+    var happenings = this.state.happenings;
+    var that = this;
+
+    var markers = Object.keys(happenings).map(function(happeningId){
+      var happening = happenings[happeningId];
+      var myLatlng = new google.maps.LatLng(happening.lat,happening.lng);
+      var marker = new google.maps.Marker({
+          position: myLatlng,
+          title: happening.title
+          });
+      return (
+        markersArray.push(marker)
+      );
+    });
+  },
 
   render: function() {
-    debugger;
+    this.clearOverlays();
     this.addMarkers();
+    this.setMarkers();
     return (
       <div className="map" ref="map"/>
     );
