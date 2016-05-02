@@ -53,7 +53,7 @@ var HappeningFormTags = React.createClass({
 });
 
 HappeningFormTags.getTags = function(){
-  return filters;
+  return {tags: filters};
 };
 
 module.exports = HappeningFormTags;

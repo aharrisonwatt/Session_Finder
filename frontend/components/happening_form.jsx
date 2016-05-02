@@ -11,7 +11,7 @@ var HappeningFormTags = require('./happening_form_tags'),
 var markersArray = [];
 
 var HappeningForm = React.createClass({
-  
+
   getInitialState: function(){
     return {
       title: '',

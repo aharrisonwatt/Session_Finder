@@ -28,7 +28,16 @@ class Api::HappeningsController < ApplicationController
   end
 
   def create
-    @happening = Happening.create!(happening_params)
+    @happening = Happening.new(happening_params)
+    @happening.user_id = current_user.id
+    @happening.date = Time.new
+    debugger
+    if @happening.save
+      Image.create({ happening_id: @happening.id, image_url: params[:happening][:image] })
+      params[:happening][:tags].each do |tagId|
+        Tagging.create({ happening_id: @happening.id, tag_id: tagId.to_i})
+      end
+    end
     render 'show'
   end
 
@@ -40,7 +49,6 @@ class Api::HappeningsController < ApplicationController
       :title,
       :body,
       :date,
-      :user_id,
       :tags
     )
   end

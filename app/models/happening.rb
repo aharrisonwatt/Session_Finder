@@ -1,5 +1,5 @@
 class Happening < ActiveRecord::Base
-  validates :user_id, :date, :lat, :lng, :title, :body, presence: true
+  validates :lat, :lng, :title, :body, presence: true
 
   has_many :taggings
   has_many :tags, through: :taggings
