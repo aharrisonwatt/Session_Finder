@@ -29,9 +29,9 @@ Image.create([
 
 Tag.create([
   { name: 'Street Fighter V'},
-  { name: 'SSMB'},
+  { name: 'SSBM'},
   { name: 'Smash 4'},
-  { name: 'Mortal Combat'},
+  { name: 'Mortal Kombat'},
   { name: 'Pokkén'},
   ])
 
