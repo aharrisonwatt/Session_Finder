@@ -1,6 +1,11 @@
 var React = require('react');
+var ReactRouter = require('react-router'),
+    hashHistory = ReactRouter.hashHistory;
 
 var HappeningIndexItem = React.createClass({
+  handleClick: function(){
+    hashHistory.push('happenings/' + this.props.happening.id);
+  },
 
   render: function() {
     var happening = this.props.happening;
@@ -14,7 +19,7 @@ var HappeningIndexItem = React.createClass({
     });
 
     return (
-      <div className='index-item'>
+      <div className='index-item' onClick={this.handleClick}>
         <h3>{happening.title}</h3>
         {images}
         <div>

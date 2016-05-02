@@ -2,6 +2,9 @@ var React = require("react");
 var UserActions = require("../actions/user_actions");
 var CurrentUserState = require("../mixins/current_user_state");
 
+var ReactRouter = require('react-router'),
+    hashHistory = ReactRouter.hashHistory;
+
 var LoginForm = React.createClass({
     mixins: [CurrentUserState],
 
@@ -20,6 +23,7 @@ var LoginForm = React.createClass({
     logout: function(event){
       event.preventDefault();
       UserActions.logout();
+      hashHistory.push('/');
     },
 
     handleSubmit: function(event){
