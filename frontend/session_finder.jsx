@@ -18,6 +18,7 @@ var Routes = (
   <Router history={hashHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Search} />
+      <Route path="/happenings" component={Search} />
       <Route path="/happenings/:happeningid" component={HappeningShow} />
     </Route>
   </Router>
