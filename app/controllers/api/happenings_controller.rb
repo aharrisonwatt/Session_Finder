@@ -1,14 +1,24 @@
 require 'byebug'
 class Api::HappeningsController < ApplicationController
   def index
-    @happenings = Happening.all
+    @happenings = []
     if(bounds)
-      @happenings = Happening.in_bounds(bounds)
+      happenings = Happening.in_bounds(bounds)
     end
 
     if (params[:filters])
-      @happenings = Happening.has_tag(params[:filters])
+      filtered_happenings = Happening.has_tag(params[:filters])
+      
+      happenings.each do |happening|
+        if filtered_happenings.include?(happening)
+          @happenings.push(happening)
+        end
+      end
+
+    else
+      @happenings = happenings
     end
+
 
     render 'index'
   end
