@@ -1,4 +1,3 @@
-require 'byebug'
 class Api::HappeningsController < ApplicationController
   def index
     @happenings = []
@@ -8,7 +7,7 @@ class Api::HappeningsController < ApplicationController
 
     if (params[:filters])
       filtered_happenings = Happening.has_tag(params[:filters])
-      
+
       happenings.each do |happening|
         if filtered_happenings.include?(happening)
           @happenings.push(happening)
