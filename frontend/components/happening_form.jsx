@@ -1,21 +1,25 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var CurrentUserState = require("../mixins/current_user_state");
 
 var ReactRouter = require('react-router'),
     hashHistory = ReactRouter.hashHistory;
 
+var HappeningFormTags = require('./happening_form_tags'),
+    ClientActions = require('../actions/client_actions');
+
 var markersArray = [];
 
 var HappeningForm = React.createClass({
+  
   getInitialState: function(){
     return {
       title: '',
       body: '',
-      game: '',
       image: '',
       lat: '',
       lng: '',
-      address: ''
+      address: '',
     };
   },
 
@@ -93,8 +97,12 @@ var HappeningForm = React.createClass({
       }
     }.bind(this));
   },
-  handleSubmit: function(){
-
+  handleSubmit: function(event){
+    event.preventDefault();
+    var tags = HappeningFormTags.getTags();
+    var happening = Object.assign({}, this.state, tags);
+    ClientActions.createHappening(happening);
+    this.navigateToSearch();
   },
 
   updateTitle: function(event){
@@ -124,6 +132,7 @@ var HappeningForm = React.createClass({
       <div>
         <div className="map" ref="map"/>
         <h3>Create A Session</h3>
+        <HappeningFormTags />
         <form onSubmit={this.handleSubmit}>
           <label>Title:
             <input
