@@ -6,8 +6,8 @@ class Api::HappeningsController < ApplicationController
       @happenings = Happening.in_bounds(bounds)
     end
 
-    if (params[:tags])
-      @happening = Happening.has_tag(params[:tags])
+    if (params[:filters])
+      @happenings = Happening.has_tag(params[:filters])
     end
 
     render 'index'

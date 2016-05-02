@@ -1,4 +1,4 @@
 json.extract!(
   tag,
-  :name
+  :name, :id
 )

@@ -12,10 +12,11 @@ class Happening < ActiveRecord::Base
         .where("lng < ?", bounds[:northEast][:lng])
   end
 
-  def self.has_tag(tags)
-    tags.each do |tag|
-      self.includes(:tags).where('tags.name = ?', tag)
+  def self.has_tag(tagIds)
+    tagIds = tagIds.map do |tag|
+      tag.to_i
     end
+    self.joins(:taggings).where(taggings: {tag_id: tagIds})
   end
 
 end

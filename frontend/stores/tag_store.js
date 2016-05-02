@@ -3,7 +3,7 @@ var Store = require('flux/utils').Store;
 var TagConstants = require('../constants/tag_constants');
 
 var TagStore = new Store(AppDispatcher);
-var _tags = [];
+var _tags = {};
 
 //API
 
@@ -17,16 +17,16 @@ TagStore.__onDispatch = function (payload) {
 };
 
 TagStore.all = function(){
-  return _tags;
+  return Object.assign({}, _tags);
 };
 
 //Private Methods
 
 function resetTags(tags){
-  _tags = [];
+  _tags = {};
 
   tags.forEach(function(tag){
-    _tags.push(tag.name);
+    _tags[tag.id] = tag.name;
   });
 }
 

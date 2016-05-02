@@ -2,7 +2,7 @@ var HappeningStore = require('../stores/happening_store'),
     ClientActions = require('../actions/client_actions');
 
 
-var filters = {};
+var filters = [];
 var bounds = {};
 
 module.exports = {
@@ -11,11 +11,12 @@ module.exports = {
     this.updateStore();
   },
 
-  setFilters: function(newFilter){
-    if(filters[newFilter] === true){
-      filters[newFilter] = false;
-    }else{
-      filters[newFilter] = true;
+  setFilters: function(tagId){
+    var index = filters.indexOf(tagId);
+    if(index === -1){
+      filters.push(tagId);
+    }else {
+      filters.splice(index, 1);
     }
     this.updateStore();
   },

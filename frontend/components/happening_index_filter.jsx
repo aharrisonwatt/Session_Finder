@@ -6,7 +6,7 @@ var React = require('react'),
 var HappeningIndexFilter = React.createClass({
 
   getInitialState: function () {
-    return { tags: [] };
+    return { tags: {} };
   },
 
   _onChange: function(){
@@ -24,17 +24,18 @@ var HappeningIndexFilter = React.createClass({
 
   updateFilter: function(event) {
     event.preventDefault();
-    CurrentFilterState.setFilters(event.currentTarget.value);
+    CurrentFilterState.setFilters(parseInt(event.currentTarget.value));
   },
 
   render: function() {
     var that = this;
-    var tags = this.state.tags.map(function(tag, index){
-      return <button key={index} onClick={that.updateFilter} value={tag}>{tag}</button>;
-    });
+      var tags = this.state.tags;
+      var tagsButtons = Object.keys(tags).map(function(tagId){
+        return <button key={tagId} onClick={that.updateFilter} value={tagId}>{tags[tagId]}</button>;
+      });
     return (
       <div>
-        {tags}
+        {tagsButtons}
       </div>
     );
   }

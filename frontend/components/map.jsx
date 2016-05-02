@@ -66,6 +66,7 @@ module.exports = React.createClass({
     },
 
   render: function() {
+    debugger;
     this.addMarkers();
     return (
       <div className="map" ref="map"/>
