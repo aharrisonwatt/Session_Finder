@@ -3,6 +3,9 @@ var ReactDOM = require('react-dom');
 var HappeningStore = require('../stores/happening_store'),
     CurrentFilterState = require('../helpers/current_filter_state');
 
+var ReactRouter = require('react-router'),
+    hashHistory = ReactRouter.hashHistory;
+
 var markersArray = [];
 
 module.exports = React.createClass({
@@ -72,8 +75,12 @@ module.exports = React.createClass({
       var myLatlng = new google.maps.LatLng(happening.lat,happening.lng);
       var marker = new google.maps.Marker({
           position: myLatlng,
-          title: happening.title
+          title: happening.title,
+          id: happening.id
           });
+      google.maps.event.addListener(marker, 'click', function () {
+        hashHistory.push('happenings/' + marker.id);
+      });
       return (
         markersArray.push(marker)
       );
