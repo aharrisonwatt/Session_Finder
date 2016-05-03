@@ -5,7 +5,7 @@ var CurrentUserState = require("../mixins/current_user_state");
 var ReactRouter = require('react-router'),
     hashHistory = ReactRouter.hashHistory;
 
-var LoginForm = React.createClass({
+var SigninForm = React.createClass({
     mixins: [CurrentUserState],
 
     getInitialState: function(){
@@ -13,22 +13,6 @@ var LoginForm = React.createClass({
         username: '',
         password: ''
       };
-    },
-
-    handleSubmit: function(event){
-      event.preventDefault();
-      UserActions.login({
-        username: this.state.username,
-        password: this.state.password
-		  });
-    },
-
-    updatePassword: function(event){
-      this.setState({ password: event.target.value});
-    },
-
-    updateUsername: function(event){
-      this.setState({ username: event.target.value});
     },
 
     guestLoginButton: function(){
@@ -47,7 +31,23 @@ var LoginForm = React.createClass({
       UserActions.login({
         username: 'guest',
         password: 'password'
+      });
+    },
+
+    handleSubmit: function(event){
+      event.preventDefault();
+      UserActions.create({
+        username: this.state.username,
+        password: this.state.password
 		  });
+    },
+
+    updatePassword: function(event){
+      this.setState({ password: event.target.value});
+    },
+
+    updateUsername: function(event){
+      this.setState({ username: event.target.value});
     },
 
     errors: function(){
@@ -90,7 +90,7 @@ var LoginForm = React.createClass({
 
     render: function(){
       return(
-        <div className="login-form">
+        <div className="signin-form">
           {this.errors()}
           {this.form()}
           {this.guestLoginButton()}
@@ -100,4 +100,4 @@ var LoginForm = React.createClass({
 });
 
 
-module.exports = LoginForm;
+module.exports = SigninForm;
