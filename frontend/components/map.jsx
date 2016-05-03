@@ -92,7 +92,9 @@ module.exports = React.createClass({
     this.addMarkers();
     this.setMarkers();
     return (
-      <div className="map" ref="map"/>
+      <div className='map-container'>
+        <div className="map" ref="map"/>
+      </div>
     );
   }
 

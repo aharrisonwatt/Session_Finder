@@ -11,10 +11,9 @@ var SplashPage = React.createClass({
   render: function() {
     return (
       <div className='splash-page'>
-        <img className='splash-page-image' src='http://i.imgur.com/5g7BNvu.jpg' />
         <div className='splash-page-container'>
-          <h1 className='splash-page-welcome-logo'>Welcome Logo</h1>
-          <h3 className='splash-page-welcome-tag'>Welcome Tagline</h3>
+          <h2 className='splash-page-welcome-logo'>Session Finder</h2>
+          <h3 className='splash-page-welcome-tag'>Get Your Game On</h3>
           <button onClick={this.handleClick}>Find A Session</button>
         </div>
       </div>
