@@ -31,10 +31,15 @@ var HappeningIndexFilter = React.createClass({
     var that = this;
       var tags = this.state.tags;
       var tagsButtons = Object.keys(tags).map(function(tagId){
-        return <button key={tagId} onClick={that.updateFilter} value={tagId}>{tags[tagId]}</button>;
+        return <button
+                className='happening-index-button'
+                key={tagId}
+                onClick={that.updateFilter}
+                value={tagId}>{tags[tagId]}
+              </button>;
       });
     return (
-      <div>
+      <div className='filter-buttons'>
         {tagsButtons}
       </div>
     );

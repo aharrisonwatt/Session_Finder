@@ -6,43 +6,15 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  border-bottom: 3px solid black;
+}
+
+h1 {
+  margin-left: 20px;
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
   align-self: center;
-}
-
-.body {
-  display: flex;
-}
-
-.happening-index {
-  display: flex;
-  flex-grow: 1;
-  flex-wrap: wrap;
-  width: 50%;
-}
-
-.map {
-  display: flex;
-  flex-grow: 1;
-  width: 500px;
-  height: 500px;
-}
-
-.index-item {
-  display: flex;
-  flex-direction: column;
-  width: 100px;
-  margin: 20px;
-  border: 1px solid black;
-  padding: 10px;
-}
-
-
-.index-image {
-  max-width: 100%;
-  max-height: 100%;
 }

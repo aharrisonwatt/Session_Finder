@@ -1,0 +1,34 @@
+.index-item {
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px;
+  border: 1px solid black;
+  padding: 10px;
+  height: 200px;
+  justify-content: space-around;
+}
+
+.index-image {
+  display: flex;
+  flex: auto;
+  height: 200px;
+}
+
+.index-event-description {
+  padding-left: 20px;
+  overflow: scroll;
+}
+
+.index-item-tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.index-item-tag {
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+}

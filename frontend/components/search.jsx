@@ -13,7 +13,7 @@ var Search = React.createClass({
   display: function() {
     if (this.state.currentUser){
       return (
-        <div className="body">
+        <div className="events-container">
           <HappeningIndex />
           <Map />
         </div>

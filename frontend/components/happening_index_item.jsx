@@ -15,16 +15,24 @@ var HappeningIndexItem = React.createClass({
     });
 
     var tags = happening.tags.map(function(tag){
-      return <li key={tag.id} className='index-tag'>{tag.name}</li>;
+      return <div key={tag.id} className='index-item-tag'>{tag.name}</div>;
     });
 
     return (
       <div className='index-item' onClick={this.handleClick}>
-        <h3>{happening.title}</h3>
-        {images}
-        <div>
-          <li>{happening.body}</li>
-          {tags}
+        <div className='index-text-container'>
+          <h2>{happening.title}</h2>
+          Description:
+          <div className='index-event-description'>{happening.body}</div>
+          <br/>
+          <br/>
+          <br/>
+          <div className='index-item-tags'>
+            {tags}
+          </div>
+        </div>
+        <div className='index-image-container'>
+          {images}
         </div>
       </div>
     );

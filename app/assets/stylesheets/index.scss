@@ -1,0 +1,31 @@
+.events-container {
+  display: flex;
+  margin: 10px
+  
+}
+
+.happening-index {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  width: 50%;
+  flex-direction: column;
+}
+
+.map {
+  display: flex;
+  flex-grow: 1;
+  width: 500px;
+  height: 500px;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.filter-button {
+  display: flex;
+}
