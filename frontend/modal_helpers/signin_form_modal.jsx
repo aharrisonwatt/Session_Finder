@@ -1,9 +1,9 @@
 var React = require('react'),
     Modal = require("react-modal"),
-    LoginForm = require('../components/login_form');
+    SignupForm = require('../components/signup_form');
 
 
-var LoginFormModal = React.createClass({
+var SigninFormModal = React.createClass({
   getInitialState: function(){
       return({ modalOpen: false });
     },
@@ -16,17 +16,17 @@ var LoginFormModal = React.createClass({
 
     render: function(){
       return(
-        <div className='login-form-modal'>
-          <button onClick={this.openModal}>Log In</button>
+        <div className='signup-form-modal'>
+          <button onClick={this.openModal}>Sign Up</button>
 
           <Modal
             isOpen={this.state.modalOpen}
             onRequestClose={this.closeModal}>
-            <LoginForm />
+            <SignupForm />
           </Modal>
         </div>
       );
     }
 });
 
-module.exports = LoginFormModal;
+module.exports = SigninFormModal;

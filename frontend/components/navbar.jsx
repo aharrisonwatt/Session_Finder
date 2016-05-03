@@ -1,13 +1,17 @@
 var React = require('react'),
     LoginFormModal = require('../modal_helpers/login_form_modal'),
-    UserActions = require('../actions/user_actions');
+    SignupFormModal = require('../modal_helpers/signin_form_modal'),
+    UserActions = require('../actions/user_actions'),
+    CurrentUserState = require("../mixins/current_user_state");
 
 var ReactRouter = require('react-router'),
     hashHistory = ReactRouter.hashHistory;
 
 var NavigationBar = React.createClass({
+  mixins: [CurrentUserState],
+
   handleClick: function(){
-    hashHistory.push('/');
+    hashHistory.push('/happenings');
   },
 
   greeting: function(){
@@ -17,7 +21,7 @@ var NavigationBar = React.createClass({
 
     return (
       <div>
-        <button onClick={this.logout}>Logout</button>
+        <button onClick={this.logout} className='btn-logout'>Logout</button>
       </div>
     );
   },
@@ -28,11 +32,25 @@ var NavigationBar = React.createClass({
     hashHistory.push('/');
   },
 
+  userAuth: function(){
+    if(this.state.currentUser){
+      return;
+    }
+
+    return (
+      <div className='nav-user-auth'>
+        <LoginFormModal />
+        <SignupFormModal />
+      </div>
+    );
+  },
+
   render: function() {
     return (
       <div  className='navbar' >
         <h1 onClick={this.handleClick}>Session Finder</h1>
-        <LoginFormModal />
+        {this.greeting()}
+        {this.userAuth()}
       </div>
     );
   }
