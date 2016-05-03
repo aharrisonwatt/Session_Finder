@@ -1,5 +1,5 @@
 var React = require('react'),
-    LoginForm = require('./login_form');
+    LoginFormModal = require('../modal_helpers/login_form_modal');
 
 var ReactRouter = require('react-router'),
     hashHistory = ReactRouter.hashHistory;
@@ -13,7 +13,7 @@ var NavigationBar = React.createClass({
     return (
       <div  className='navbar' >
         <h1 onClick={this.handleClick}>Session Finder</h1>
-        <LoginForm />
+        <LoginFormModal />
       </div>
     );
   }
