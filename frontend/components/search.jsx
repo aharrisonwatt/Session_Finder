@@ -8,17 +8,14 @@ var React = require('react'),
 
 
 var Search = React.createClass({
-  mixins: [CurrentUserState],
 
   display: function() {
-    if (this.state.currentUser){
       return (
         <div className="events-container">
           <HappeningIndex />
           <Map />
         </div>
       );
-    }
   },
 
   render: function() {

@@ -1,0 +1,45 @@
+.happening-form {
+  display: flex;
+}
+
+.happening-form-container {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  width: 10%;
+  flex-direction: column;
+  margin-top: 10px
+}
+
+.happening-form-header {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.happening-form-tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.happening-form-label {
+  margin: 10px;
+  padding: 2px;
+}
+
+.happening-form-inputs {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 10px;
+  align-items: flex-start;
+}
+
+.happening-form-confirm-item {
+  padding: 10px;
+  margin: 5px;
+  font-size: 12px;
+  border-radius: 10px;
+}

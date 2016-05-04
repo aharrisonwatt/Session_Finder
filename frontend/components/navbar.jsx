@@ -1,6 +1,7 @@
 var React = require('react'),
     LoginFormModal = require('../modal_helpers/login_form_modal'),
     SignupFormModal = require('../modal_helpers/signin_form_modal'),
+    HappeningFormModal = require('../modal_helpers/happening_form_modal'),
     UserActions = require('../actions/user_actions'),
     CurrentUserState = require("../mixins/current_user_state");
 
@@ -49,6 +50,7 @@ var NavigationBar = React.createClass({
     return (
       <div  className='navbar' >
         <h1 onClick={this.handleClick}>Session Finder</h1>
+        <HappeningFormModal />
         {this.greeting()}
         {this.userAuth()}
       </div>

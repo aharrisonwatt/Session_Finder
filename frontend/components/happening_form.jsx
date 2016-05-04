@@ -129,38 +129,47 @@ var HappeningForm = React.createClass({
 
   render: function() {
     return (
-      <div>
-        <div className="map" ref="map"/>
-        <h3>Create A Session</h3>
-        <HappeningFormTags />
-        <form onSubmit={this.handleSubmit}>
-          <label>Title:
-            <input
-              type="text"
-              value={this.state.title}
-              onChange={this.updateTitle} />
-          </label>
-          <label>Description:
-            <input
-              type="text"
-              value={this.state.body}
-              onChange={this.updateBody} />
-          </label>
-          <label>image url:
-            <input
-              type="text"
-              value={this.state.image}
-              onChange={this.updateImage} />
-          </label>
-          <label>Address:
-            <input
-              type="text"
-              value={this.state.address}
-              onChange={this.updateAddress}/>
-          </label>
-          <input type="submit" value="create session"/>
-        </form>
-        <button onClick={this.handleCancel}>Cancel</button>
+      <div className='happening-form'>
+        <div className="happening-form-container">
+          <h3 className="happening-form-header">Create A Session</h3>
+          <HappeningFormTags />
+          <form className="happening-form-inputs" onSubmit={this.handleSubmit}>
+            <label className='happening-form-label'>Title:
+              <input
+                type="text"
+                value={this.state.title}
+                onChange={this.updateTitle} />
+            </label>
+            <label className='happening-form-label'>Description:
+              <input
+                type="text"
+                value={this.state.body}
+                onChange={this.updateBody} />
+            </label>
+            <label className='happening-form-label'>image url:
+              <input
+                type="text"
+                value={this.state.image}
+                onChange={this.updateImage} />
+            </label>
+            <label className='happening-form-label'>Address:
+              <input
+                type="text"
+                value={this.state.address}
+                onChange={this.updateAddress}/>
+            </label>
+            <div className="happening-form-confirm">
+              <input className="happening-form-confirm-item"
+                     type="submit"
+                     value="Create Session"/>
+              <button className="happening-form-confirm-item"
+                      onClick={this.handleCancel}>Cancel</button>
+            </div>
+          </form>
+        </div>
+        <div className='map-container'>
+          <div className="map" ref="map"/>
+        </div>
       </div>
     );
   }

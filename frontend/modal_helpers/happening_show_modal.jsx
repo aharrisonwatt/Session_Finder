@@ -1,9 +1,9 @@
 var React = require('react'),
     Modal = require("react-modal"),
-    HappeningForm = require('../components/happening_form');
+    HappeningShow = require('../components/happening_show');
 
 
-var HappeningFormModal = React.createClass({
+var HappeningShowModal = React.createClass({
   getInitialState: function(){
       return({ modalOpen: false });
     },
@@ -16,17 +16,17 @@ var HappeningFormModal = React.createClass({
 
     render: function(){
       return(
-        <div className='happening-form-modal'>
+        <div className='happening-show-modal'>
           <button onClick={this.openModal}>Create A Session</button>
 
           <Modal
             isOpen={this.state.modalOpen}
             onRequestClose={this.closeModal}>
-            <HappeningForm />
+            <HappeningShow />
           </Modal>
         </div>
       );
     }
 });
 
-module.exports = HappeningFormModal;
+module.exports = HappeningShowModal;

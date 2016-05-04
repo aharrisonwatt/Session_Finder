@@ -44,7 +44,7 @@ var HappeningFormTags = React.createClass({
         return <button key={tagId} onClick={that.updateFilter} value={tagId}>{tags[tagId]}</button>;
       });
     return (
-      <div>
+      <div className="happening-form-tags">
         {tagsButtons}
       </div>
     );
