@@ -12,7 +12,7 @@ var NavigationBar = React.createClass({
   mixins: [CurrentUserState],
 
   handleClick: function(){
-    hashHistory.push('/happenings');
+    hashHistory.push('/');
   },
 
   greeting: function(){
