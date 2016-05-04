@@ -39,7 +39,7 @@ var NavigationBar = React.createClass({
     }
 
     return (
-      <div className='nav-user-auth'>
+      <div>
         <LoginFormModal />
         <SignupFormModal />
       </div>
@@ -50,7 +50,7 @@ var NavigationBar = React.createClass({
     return (
       <div  className='navbar' >
         <h1 onClick={this.handleClick}>Session Finder</h1>
-        <div className='nav-user-auth'>
+        <div>
           <HappeningFormModal />
         </div>
         {this.greeting()}

@@ -20,6 +20,8 @@ var HappeningFormModal = React.createClass({
           <button className='pure-button'
                   onClick={this.openModal}>Create A Session</button>
           <Modal
+            className='happening-modal'
+            overlayClassName='modal-overlay'
             isOpen={this.state.modalOpen}
             onRequestClose={this.closeModal}>
             <HappeningForm />

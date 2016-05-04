@@ -21,6 +21,8 @@ var SigninFormModal = React.createClass({
             onClick={this.openModal}>Sign Up</button>
 
           <Modal
+            className='modal'
+            overlayClassName='modal-overlay'
             isOpen={this.state.modalOpen}
             onRequestClose={this.closeModal}>
             <SignupForm />
