@@ -31,13 +31,6 @@ var LoginForm = React.createClass({
       this.setState({ username: event.target.value});
     },
 
-    guestLogin: function(){
-      UserActions.login({
-        username: 'guest',
-        password: 'password'
-		  });
-    },
-
     errors: function(){
       if(!this.state.authErrors){
         return;
@@ -45,7 +38,7 @@ var LoginForm = React.createClass({
 
       var that = this;
       return (
-        <div>
+        <div className='login-errors'>
           {
             Object.keys(this.state.authErrors).map(function(key, index){
               return (<li key={index}>{that.state.authErrors[key]}</li>);
@@ -74,7 +67,6 @@ var LoginForm = React.createClass({
                 onChange={this.updatePassword}/>
         		</label>
             <input className='auth-form-item' type="Submit"/>
-            <button className='auth-form-item' onClick={this.guestLogin}>Guest Login</button>
           </form>
         </div>
       );

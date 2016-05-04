@@ -24,7 +24,7 @@ var HappeningFormModal = React.createClass({
             overlayClassName='modal-overlay'
             isOpen={this.state.modalOpen}
             onRequestClose={this.closeModal}>
-            <HappeningForm />
+            <HappeningForm closeModal={this.closeModal}/>
           </Modal>
         </div>
       );

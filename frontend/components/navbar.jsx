@@ -33,6 +33,13 @@ var NavigationBar = React.createClass({
     hashHistory.push('/');
   },
 
+  guestLogin: function(){
+    UserActions.login({
+      username: 'guest',
+      password: 'password'
+	  });
+  },
+
   userAuth: function(){
     if(this.state.currentUser){
       return;
@@ -40,6 +47,9 @@ var NavigationBar = React.createClass({
 
     return (
       <div className='navbar-modal'>
+        <div className='form-modal'>
+          <button className='pure-button' onClick={this.guestLogin}>Guest Login</button>
+        </div>
         <LoginFormModal />
         <SignupFormModal />
       </div>
@@ -53,8 +63,10 @@ var NavigationBar = React.createClass({
         <div className='navbar-modal'>
           <HappeningFormModal />
         </div>
-        {this.greeting()}
-        {this.userAuth()}
+        <div className='auth-container'>
+          {this.greeting()}
+          {this.userAuth()}
+        </div>
       </div>
     );
   }

@@ -23,7 +23,6 @@ var HappeningIndexFilter = React.createClass({
   },
 
   updateFilter: function(event) {
-    event.preventDefault();
     CurrentFilterState.setFilters(parseInt(event.currentTarget.value));
   },
 
@@ -32,19 +31,23 @@ var HappeningIndexFilter = React.createClass({
       var tags = this.state.tags;
       var tagsButtons = Object.keys(tags).map(function(tagId){
         return <li
-                className='tg-list-item'
-                key={tagId}
-                onClick={that.updateFilter}
-                value={tagId}>
-                <h3>{tags[tagId]}</h3>
-                <input id='cb4' type='checkbox' className='tgl tgl-flat' />
-                <label for='cb4' className='tgl-btn'></label>
+                className='filter-item'
+                key={tagId}>
+                <h3 className='filter-item-header'>{tags[tagId]}</h3>
+                <input
+                  value={tagId}
+                  onClick={that.updateFilter}
+                  type='checkbox'
+                  className='filter-item-input' />
               </li>;
       });
     return (
-      <ul className='tg-list'>
-        {tagsButtons}
-      </ul>
+      <div className='filter-item-container'>
+        <h3 className='filter-item-list-header'>Filter Results by Game</h3>
+        <ul className='filter-item-list'>
+          {tagsButtons}
+        </ul>
+      </div>
     );
   }
 

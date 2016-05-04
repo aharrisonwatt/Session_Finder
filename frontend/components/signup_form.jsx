@@ -57,7 +57,7 @@ var SigninForm = React.createClass({
 
       var that = this;
       return (
-        <div>
+        <div className='login-errors'>
           {
             Object.keys(this.state.authErrors).map(function(key, index){
               return (<li key={index}>{that.state.authErrors[key]}</li>);
@@ -85,8 +85,8 @@ var SigninForm = React.createClass({
                 value={this.state.password}
                 onChange={this.updatePassword}/>
         		</label >
-            <input className='auth-form-item' type="Submit"/>
           </form>
+          <input className='auth-form-item' type="Submit"/>
         </div>
       );
     },

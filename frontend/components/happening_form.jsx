@@ -124,7 +124,7 @@ var HappeningForm = React.createClass({
 
   handleCancel: function(event){
     event.preventDefault();
-    this.navigateToSearch();
+    this.props.closeModal();
   },
 
   render: function() {
