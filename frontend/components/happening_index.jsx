@@ -28,15 +28,17 @@ var HappeningIndex = React.createClass({
     return (
       <div className="happening-index">
         <HappeningIndexFilter />
-        {
-          Object.keys(happenings).map(function(happeningId){
-            return (
-              <HappeningIndexItem
-                key={happeningId}
-                happening={happenings[happeningId]} />
-            );
-          })
-        }
+        <div className="index-item-container">
+          {
+            Object.keys(happenings).map(function(happeningId){
+              return (
+                <HappeningIndexItem
+                  key={happeningId}
+                  happening={happenings[happeningId]} />
+              );
+            })
+          }
+        </div>
       </div>
     );
   }

@@ -18,7 +18,6 @@ var HappeningApiUtil = {
   },
 
   createHappening: function(happening){
-    debugger;
     $.ajax({
       url: "api/happenings",
       method: "POST",

@@ -142,7 +142,7 @@ var HappeningForm = React.createClass({
             </label>
             <label className='happening-form-label'>Description:
               <input
-                type="text"
+                type="textarea"
                 value={this.state.body}
                 onChange={this.updateBody} />
             </label>
@@ -168,7 +168,7 @@ var HappeningForm = React.createClass({
           </form>
         </div>
         <div className='map-container'>
-          <div className="map" ref="map"/>
+          <div className="happening-form-map" ref="map"/>
         </div>
       </div>
     );
