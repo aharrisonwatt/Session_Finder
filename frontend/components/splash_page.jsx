@@ -14,7 +14,7 @@ var SplashPage = React.createClass({
         <div className='splash-page-container'>
           <h2 className='splash-page-welcome-logo'>Session Finder</h2>
           <h3 className='splash-page-welcome-tag'>Tag Line make it pop</h3>
-          <button onClick={this.handleClick}>Get Your Game On</button>
+          <button className='pure-button' onClick={this.handleClick}>Get Your Game On</button>
         </div>
       </div>
     );
