@@ -27,3 +27,18 @@
   display: flex;
   flex-direction: column;
 }
+
+.auth-header {
+  display: flex;
+  justify-content: center;
+}
+
+.auth-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.auth-form-item {
+  margin: 10px
+}

@@ -26,8 +26,8 @@ var HappeningForm = React.createClass({
   componentDidMount: function(){
     var map = ReactDOM.findDOMNode(this.refs.map);
     var mapOptions = {
-      center: {lat: 37.7758, lng: -122.435},
-      zoom: 12
+      center: {lat: 37.611444, lng: -122.227020},
+      zoom: 9
     };
     this.map = new google.maps.Map(map, mapOptions);
     this.registerListeners();

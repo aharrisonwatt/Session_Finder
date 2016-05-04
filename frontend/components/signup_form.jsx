@@ -69,22 +69,25 @@ var SigninForm = React.createClass({
 
     form: function(){
       return(
-        <form onSubmit={this.handleSubmit}>
-      		<label> Username:
-      			<input
-              type="text"
-              value={this.state.username}
-              onChange={this.updateUsername}/>
-      		</label>
+        <div>
+          <h3 className='auth-header'>Sign Up</h3>
+          <form className='auth-form' onSubmit={this.handleSubmit}>
+        		<label className='auth-form-item'> Username:
+        			<input
+                type="text"
+                value={this.state.username}
+                onChange={this.updateUsername}/>
+        		</label>
 
-      		<label> Password:
-      			<input
-              type="password"
-              value={this.state.password}
-              onChange={this.updatePassword}/>
-      		</label>
-          <input type="Submit"/>
-        </form>
+        		<label className='auth-form-item'> Password:
+        			<input
+                type="password"
+                value={this.state.password}
+                onChange={this.updatePassword}/>
+        		</label >
+            <input className='auth-form-item' type="Submit"/>
+          </form>
+        </div>
       );
     },
 
