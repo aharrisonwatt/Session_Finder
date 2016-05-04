@@ -102,7 +102,7 @@ var HappeningForm = React.createClass({
     var tags = HappeningFormTags.getTags();
     var happening = Object.assign({}, this.state, tags);
     ClientActions.createHappening(happening);
-    this.navigateToSearch();
+    this.props.closeModal();
   },
 
   updateTitle: function(event){
@@ -115,11 +115,6 @@ var HappeningForm = React.createClass({
 
   updateImage: function(event){
     this.setState({ image: event.target.value});
-  },
-
-
-  navigateToSearch: function(){
-    hashHistory.push("/");
   },
 
   handleCancel: function(event){
@@ -159,10 +154,10 @@ var HappeningForm = React.createClass({
                 onChange={this.updateAddress}/>
             </label>
             <div className="happening-form-confirm">
-              <input className="happening-form-confirm-item"
-                     type="submit"
-                     value="Create Session"/>
-              <button className="happening-form-confirm-item"
+              <input  className="pure-button"
+                      type="submit"
+                      value="Create Session"/>
+              <button className="pure-button"
                       onClick={this.handleCancel}>Cancel</button>
             </div>
           </form>

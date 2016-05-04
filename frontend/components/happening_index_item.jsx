@@ -19,20 +19,18 @@ var HappeningIndexItem = React.createClass({
     });
 
     return (
-      <div className='index-item' onClick={this.handleClick}>
+      <div className='index-item'>
         <div className='index-image-container'>
           {images}
         </div>
         <div className='index-text-container'>
           <h2>{happening.title}</h2>
-          Description:
-          <div className='index-event-description'>{happening.body}</div>
-          <br/>
-          <br/>
-          <br/>
           <div className='index-item-tags'>
             {tags}
           </div>
+          <button className='index-item-details' onClick={this.handleClick}>
+            Session Details
+          </button>
         </div>
       </div>
     );

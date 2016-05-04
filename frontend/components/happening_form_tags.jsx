@@ -41,12 +41,20 @@ var HappeningFormTags = React.createClass({
     var that = this;
       var tags = this.state.tags;
       var tagsButtons = Object.keys(tags).map(function(tagId){
-        return <button key={tagId} onClick={that.updateFilter} value={tagId}>{tags[tagId]}</button>;
+        return <li className='happening-form-tag'
+                   key={tagId}>
+                   <h3 className='happening-form-tag-header'> {tags[tagId]} </h3>
+                   <input
+                     className='happening-form-input'
+                     type='checkbox'
+                     onClick={that.updateFilter}
+                     value={tagId} />
+                </li>;
       });
     return (
-      <div className="happening-form-tags">
+      <ul className="happening-form-tags">
         {tagsButtons}
-      </div>
+      </ul>
     );
   }
 
