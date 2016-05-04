@@ -31,18 +31,6 @@ var LoginForm = React.createClass({
       this.setState({ username: event.target.value});
     },
 
-    guestLoginButton: function(){
-      if(this.state.currentUser){
-        return;
-      }
-
-      return (
-        <div>
-          <button onClick={this.guestLogin}>Guest Login</button>
-        </div>
-      );
-    },
-
     guestLogin: function(){
       UserActions.login({
         username: 'guest',
@@ -69,7 +57,7 @@ var LoginForm = React.createClass({
 
     form: function(){
       return(
-        <div>
+        <div className='auth-form-container'>
           <h3 className='auth-header'>Log In</h3>
           <form className='auth-form' onSubmit={this.handleSubmit}>
         		<label className='auth-form-item'> Username:
@@ -86,6 +74,7 @@ var LoginForm = React.createClass({
                 onChange={this.updatePassword}/>
         		</label>
             <input className='auth-form-item' type="Submit"/>
+            <button className='auth-form-item' onClick={this.guestLogin}>Guest Login</button>
           </form>
         </div>
       );
@@ -96,7 +85,6 @@ var LoginForm = React.createClass({
         <div className="login-form">
           {this.errors()}
           {this.form()}
-          {this.guestLoginButton()}
         </div>
       );
     }

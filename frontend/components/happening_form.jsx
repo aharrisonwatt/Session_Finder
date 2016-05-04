@@ -167,7 +167,7 @@ var HappeningForm = React.createClass({
             </div>
           </form>
         </div>
-        <div className='map-container'>
+        <div className='happening-form-map-container'>
           <div className="happening-form-map" ref="map"/>
         </div>
       </div>

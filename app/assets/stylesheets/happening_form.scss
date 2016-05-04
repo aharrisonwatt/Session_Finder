@@ -50,3 +50,9 @@
   height: 100%;
   border: 1px solid black;
 }
+
+.happening-form-map-container {
+  display: flex;
+  flex-grow: 2;
+  height: calc(100vh - 120px);
+}

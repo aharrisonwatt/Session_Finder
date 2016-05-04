@@ -69,7 +69,7 @@ var SigninForm = React.createClass({
 
     form: function(){
       return(
-        <div>
+        <div className='auth-form-container'>
           <h3 className='auth-header'>Sign Up</h3>
           <form className='auth-form' onSubmit={this.handleSubmit}>
         		<label className='auth-form-item'> Username:
@@ -96,7 +96,6 @@ var SigninForm = React.createClass({
         <div className="signin-form">
           {this.errors()}
           {this.form()}
-          {this.guestLoginButton()}
         </div>
       );
     }

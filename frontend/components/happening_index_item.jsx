@@ -20,6 +20,9 @@ var HappeningIndexItem = React.createClass({
 
     return (
       <div className='index-item' onClick={this.handleClick}>
+        <div className='index-image-container'>
+          {images}
+        </div>
         <div className='index-text-container'>
           <h2>{happening.title}</h2>
           Description:
@@ -30,9 +33,6 @@ var HappeningIndexItem = React.createClass({
           <div className='index-item-tags'>
             {tags}
           </div>
-        </div>
-        <div className='index-image-container'>
-          {images}
         </div>
       </div>
     );
