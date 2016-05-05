@@ -60,8 +60,8 @@ var HappeningShow = React.createClass({
               {title}
             </h2>
           </div>
-            <div className='happening-show-description'>
-                {body}
+            <div className='happening-show-description-container'>
+              <div className='happening-show-description'>{body}</div>
             </div>
           <div className='happening-value'>
             <ul className='happening-value-tags'>
