@@ -85,8 +85,8 @@ var SigninForm = React.createClass({
                 value={this.state.password}
                 onChange={this.updatePassword}/>
         		</label >
+            <input className='pure-button auth-form-item' type="Submit"/>
           </form>
-          <input className='auth-form-item' type="Submit"/>
         </div>
       );
     },

@@ -43,7 +43,7 @@ var HappeningShow = React.createClass({
         return <img key={image.id} className='happening-show-image' src={image.image_url}/>;
       });
       var tags = happening.tags.map(function(tag){
-        return <div key={tag.id} className='happening-value'>{tag.name}</div>;
+        return <div key={tag.id} className='happening-value-tag'>{tag.name}</div>;
       });
       var title = happening.title;
       var body = happening.body;
@@ -65,14 +65,15 @@ var HappeningShow = React.createClass({
             </div>
           <div className='happening-value'>
             <ul className='happening-value-tags'>
-              <div className='happening-value'>Games:</div>
+              <h3 className='happening-show-decription-header'>Games</h3>
               {tags}
             </ul>
-            <div className='happening-value-address'>
-              Address: {this.state.address}
+            <div className='happening-value-address-container'>
+              <h3 className='happening-show-decription-header'>Address</h3>
+              <div className='happening-value-address'>{this.state.address}</div>
             </div>
-            <div className='happening-value-header'>
-              Created On: {date}
+            <div className='happening-value-date-container'>
+              <div className='happening-value-date'>Created On: {date} </div>
             </div>
           </div>
         </div>

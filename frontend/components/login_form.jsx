@@ -66,7 +66,7 @@ var LoginForm = React.createClass({
                 value={this.state.password}
                 onChange={this.updatePassword}/>
         		</label>
-            <input className='auth-form-item' type="Submit"/>
+            <input className='pure-button auth-form-item' type="Submit"/>
           </form>
         </div>
       );
@@ -83,7 +83,7 @@ var LoginForm = React.createClass({
     guestLoginButton: function(){
       if (this.props.error){
         return(
-          <button className='pure-button' onClick={this.guestLogin}>Guest Login</button>
+          <button className='pure-button auth-form-item' onClick={this.guestLogin}>Guest Login</button>
         );
       }
     },
