@@ -33,10 +33,29 @@
   color: white;
   font-size: 86px;
   margin-bottom: 10px;
-  text-shadow: 5px 5px black;
 }
 
 .splash-page-welcome-tag {
   color: white;
   margin: 10px;
+}
+.splash-page-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  height: 60px;
+  width: 200px;
+  top: 70%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -30px;
+}
+
+.click-me {
+  background-color: #66DB10;
+  color: #FFFFFF;
+  width: 200px;
+  font-size: 22px;
+  border-radius: 10px;
 }

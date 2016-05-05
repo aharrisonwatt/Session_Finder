@@ -40,6 +40,10 @@ var NavigationBar = React.createClass({
 	  });
   },
 
+  sessionCreation: function(){
+
+  },
+
   userAuth: function(){
     if(this.state.currentUser){
       return;
