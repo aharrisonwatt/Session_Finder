@@ -10,7 +10,7 @@ var App = React.createClass({
 
   render: function() {
     return (
-      <div>
+      <div classname='main-body'>
         <Navbar />
         {this.props.children}
       </div>

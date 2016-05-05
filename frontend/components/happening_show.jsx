@@ -37,21 +37,25 @@ var HappeningShow = React.createClass({
     }
     return (
       <div className='happening-show-container'>
-        <h1 className='happening-show-title'>{title}</h1>
-        <section>
-          <div className='happening-show-description'>{body}</div>
-          <ul>
-            <li>
-              <div className='happening-show-tags'>Game</div>
+        <div className='happening-show-details-container'>
+          <div className='happening-show-title-container'>
+            <h2 className='happening-show-title'>
+              {title}
+            </h2>
+          </div>
+            <div className='happening-show-description'>
+                {body}
+            </div>
+          <div className='happening-value'>
+            {date}
+            <ul className='happening-show-tags'>
               {tags}
-            </li>
-            <li>
-              <div className='happening-attribute'>Date</div>
-              <div className='happening-value'>{date}</div>
-            </li>
-          </ul>
+            </ul>
+          </div>
+        </div>
+        <div className='happening-show-image-container'>
           {images}
-        </section>
+        </div>
       </div>
     );
   }

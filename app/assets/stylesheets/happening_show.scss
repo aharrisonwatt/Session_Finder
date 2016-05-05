@@ -1,0 +1,44 @@
+.happening-show-container {
+  display: flex;
+  flex-direction: row;
+}
+.happening-show-image-container {
+  height: 600px;
+  display: flex;
+  background-color: black;
+}
+
+.happening-show-details-container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 300px;
+  align-items: center;
+}
+
+.happening-show-image {
+  display: flex;
+  height: 100%;
+}
+
+.happening-show-title {
+  justify-content: center;
+  display: flex;
+}
+
+.happening-show-title-container {
+  display: flex;
+  justify-content: center;
+  background-color: slategray;
+}
+
+.happening-show-description {
+  display: flex;
+  justify-content: center;
+}
+
+.happening-show-description-container {
+  display: flex;
+  justify-content: center;
+}
