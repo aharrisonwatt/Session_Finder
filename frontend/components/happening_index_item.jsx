@@ -28,7 +28,7 @@ var HappeningIndexItem = React.createClass({
         <div className='index-text-container'>
           <h2>{happening.title}</h2>
           <div className='index-item-tags'>
-            <h3>Games:</h3>
+            <h3 className='index-item-tas-header'>Games:</h3>
             <div className='index-item-tags-container'>
               {tags}
             </div>

@@ -2,7 +2,6 @@
   display: flex;
   flex: auto;
   flex-direction: row;
-  flex-wrap: wrap;
   margin: 20px;
   border: 1px solid black;
   padding: 10px;
@@ -53,4 +52,15 @@
 .index-item-tags-container {
   display: flex;
   flex-direction: row;
+}
+
+.index-text-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.index-item-tas-header {
+  
 }

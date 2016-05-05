@@ -22,9 +22,23 @@ var HappeningShow = React.createClass({
     this.setState( { happening: happening});
   },
 
+  setAddress: function(coords){
+    var that = this;
+    var myLatlng = new google.maps.LatLng(coords.lat, coords.lng);
+    var geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode({'location': myLatlng}, function(results){
+      that.setState({
+        address: results[0].formatted_address
+      });
+    });
+  },
+
   render: function() {
     if (this.state.happening){
       var happening = this.state.happening;
+      var coords = { lat: happening.lat, lng: happening.lng };
+      this.setAddress(coords);
       var images = happening.image.map(function(image){
         return <img key={image.id} className='happening-show-image' src={image.image_url}/>;
       });
@@ -33,7 +47,10 @@ var HappeningShow = React.createClass({
       });
       var title = happening.title;
       var body = happening.body;
-      var date = happening.date;
+      var dateObj = new Date(happening.date);
+      var date = (dateObj.getDay() + '/' +
+                 dateObj.getMonth() + '/' +
+                 dateObj.getFullYear());
     }
     return (
       <div className='happening-show-container'>
@@ -47,10 +64,16 @@ var HappeningShow = React.createClass({
                 {body}
             </div>
           <div className='happening-value'>
-            {date}
-            <ul className='happening-show-tags'>
+            <ul className='happening-value-tags'>
+              <div className='happening-value'>Games:</div>
               {tags}
             </ul>
+            <div className='happening-value-address'>
+              Address: {this.state.address}
+            </div>
+            <div className='happening-value-header'>
+              Created On: {date}
+            </div>
           </div>
         </div>
         <div className='happening-show-image-container'>

@@ -6,6 +6,7 @@
   height: 600px;
   display: flex;
   background-color: black;
+  width: 100%;
 }
 
 .happening-show-details-container {
@@ -23,14 +24,15 @@
 }
 
 .happening-show-title {
-  justify-content: center;
   display: flex;
+  justify-content: center;
 }
 
 .happening-show-title-container {
   display: flex;
   justify-content: center;
   background-color: slategray;
+  width: 100%;
 }
 
 .happening-show-description {
@@ -41,4 +43,25 @@
 .happening-show-description-container {
   display: flex;
   justify-content: center;
+}
+
+.happening-value {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 200px
+}
+
+.happening-value-tags {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.happening-value-date {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px;
 }
