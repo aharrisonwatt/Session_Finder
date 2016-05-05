@@ -33,7 +33,6 @@ var HappeningFormTags = React.createClass({
   },
 
   updateFilter: function(event) {
-    event.preventDefault();
     this.setFilters(parseInt(event.currentTarget.value));
   },
 
