@@ -13,20 +13,24 @@ var LoginFormModal = React.createClass({
     openModal: function(){
       this.setState({ modalOpen: true });
     },
+    modal: function(){
+      return(
+        <Modal
+          className='modal'
+          overlayClassName='modal-overlay'
+          isOpen={this.state.modalOpen}
+          onRequestClose={this.closeModal}>
+          <LoginForm />
+        </Modal>
+      );
+    },
 
     render: function(){
       return(
         <div className='form-modal'>
           <button className='pure-button'
             onClick={this.openModal}>Log In</button>
-
-          <Modal
-            className='modal'
-            overlayClassName='modal-overlay'
-            isOpen={this.state.modalOpen}
-            onRequestClose={this.closeModal}>
-            <LoginForm />
-          </Modal>
+          {this.modal()}
         </div>
       );
     }

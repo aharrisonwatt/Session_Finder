@@ -72,11 +72,36 @@ var LoginForm = React.createClass({
       );
     },
 
+    requireLogin: function(){
+      if (this.props.error){
+        return(
+          <h3 className='login-errors'>Please Log In</h3>
+        );
+      }
+    },
+
+    guestLoginButton: function(){
+      if (this.props.error){
+        return(
+          <button className='pure-button' onClick={this.guestLogin}>Guest Login</button>
+        );
+      }
+    },
+
+    guestLogin: function(){
+      UserActions.login({
+        username: 'guest',
+        password: 'password'
+      });
+    },
+
     render: function(){
       return(
         <div className="login-form">
+          {this.requireLogin()}
           {this.errors()}
           {this.form()}
+          {this.guestLoginButton()}
         </div>
       );
     }

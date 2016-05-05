@@ -1,6 +1,7 @@
 var React = require('react'),
     Modal = require("react-modal"),
-    HappeningForm = require('../components/happening_form');
+    HappeningForm = require('../components/happening_form'),
+    LoginForm = require('../components/login_form');
 
 
 var HappeningFormModal = React.createClass({
@@ -11,14 +12,12 @@ var HappeningFormModal = React.createClass({
       this.setState({ modalOpen: false });
     },
     openModal: function(){
-      this.setState({ modalOpen: true });
+        this.setState({ modalOpen: true });
     },
 
-    render: function(){
-      return(
-        <div className='form-modal'>
-          <button className='pure-button'
-                  onClick={this.openModal}>Create A Session</button>
+    modal: function(){
+      if (this.props.currentUser){
+        return (
           <Modal
             className='happening-modal'
             overlayClassName='modal-overlay'
@@ -26,6 +25,26 @@ var HappeningFormModal = React.createClass({
             onRequestClose={this.closeModal}>
             <HappeningForm closeModal={this.closeModal}/>
           </Modal>
+        );
+      }else{
+        return (
+          <Modal
+            className='modal'
+            overlayClassName='modal-overlay'
+            isOpen={this.state.modalOpen}
+            onRequestClose={this.closeModal}>
+            <LoginForm error='true' closeModal={this.closeModal}/>
+          </Modal>
+        );
+      }
+    },
+
+    render: function(){
+      return(
+        <div className='form-modal'>
+          <button className='pure-button'
+                  onClick={this.openModal}>Create A Session</button>
+          {this.modal()}
         </div>
       );
     }

@@ -61,7 +61,7 @@ var NavigationBar = React.createClass({
       <div  className='navbar' >
         <h1 onClick={this.handleClick}>Session Finder</h1>
         <div className='navbar-happening-form'>
-          <HappeningFormModal />
+          <HappeningFormModal currentUser={this.state.currentUser}/>
         </div>
         <div className='auth-container'>
           {this.greeting()}
