@@ -23,6 +23,14 @@ var HappeningIndex = React.createClass({
     this.happeningListener.remove();
   },
 
+  noHappenings: function(){
+    if(this.state.happenings === undefined){
+      return(
+        <h3>No Sessions Found</h3>
+      );
+    }
+  },
+
   render: function() {
     var happenings = this.state.happenings;
     return (

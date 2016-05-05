@@ -99,10 +99,14 @@ var HappeningForm = React.createClass({
   },
   handleSubmit: function(event){
     event.preventDefault();
-    var tags = HappeningFormTags.getTags();
-    var happening = Object.assign({}, this.state, tags);
-    ClientActions.createHappening(happening);
-    this.props.closeModal();
+    if (HappeningFormTags.getTags().tags.length === 0) {
+      this.setState( {errors:'Please Select A Game'} );
+    }else{
+      var tags = HappeningFormTags.getTags();
+      var happening = Object.assign({}, this.state, tags);
+      ClientActions.createHappening(happening);
+      this.props.closeModal();
+    }
   },
 
   updateTitle: function(event){
@@ -122,10 +126,21 @@ var HappeningForm = React.createClass({
     this.props.closeModal();
   },
 
+  showErrors: function(){
+    if (this.state.errors){
+      return(
+        <h3 className='login-errors'>{this.state.errors}</h3>
+      );
+    }else{
+      return;
+    }
+  },
+
   render: function() {
     return (
       <div className='happening-form'>
         <div className="happening-form-container">
+          {this.showErrors()}
           <h3 className="happening-form-header">Create A Session</h3>
           <HappeningFormTags />
           <form className="happening-form-inputs" onSubmit={this.handleSubmit}>
