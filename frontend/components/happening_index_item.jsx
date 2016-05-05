@@ -2,6 +2,8 @@ var React = require('react');
 var ReactRouter = require('react-router'),
     hashHistory = ReactRouter.hashHistory;
 
+var HappeningShowModal = require('../modal_helpers/happening_show_modal');
+
 var HappeningIndexItem = React.createClass({
   handleClick: function(){
     hashHistory.push('happenings/' + this.props.happening.id);
@@ -26,11 +28,12 @@ var HappeningIndexItem = React.createClass({
         <div className='index-text-container'>
           <h2>{happening.title}</h2>
           <div className='index-item-tags'>
-            {tags}
+            <h3>Games:</h3>
+            <div>
+              {tags}
+            </div>
           </div>
-          <button className='index-item-details' onClick={this.handleClick}>
-            Session Details
-          </button>
+          <HappeningShowModal happening={happening}/>
         </div>
       </div>
     );

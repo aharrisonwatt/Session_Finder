@@ -9,7 +9,7 @@ var HappeningShow = React.createClass({
 
   componentDidMount: function() {
     this.happeningListener = HappeningStore.addListener(this._onChange);
-    ClientActions.fetchSingleHappening(parseInt(this.props.params.happeningid));
+    ClientActions.fetchSingleHappening(this.props.happening.id);
   },
 
   componentWillUnmount: function() {
@@ -17,7 +17,7 @@ var HappeningShow = React.createClass({
   },
 
   _onChange: function() {
-    var happeningId = this.props.params.happeningid;
+    var happeningId = this.props.happening.id;
     var happening = HappeningStore.find(happeningId) || {} ;
     this.setState( { happening: happening});
   },
@@ -36,13 +36,13 @@ var HappeningShow = React.createClass({
       var date = happening.date;
     }
     return (
-      <div>
-        <h1>{title}</h1>
+      <div className='happening-show-container'>
+        <h1 className='happening-show-title'>{title}</h1>
         <section>
-          <div className='happening-description'>{body}</div>
+          <div className='happening-show-description'>{body}</div>
           <ul>
             <li>
-              <div className='happening-attribute'>Game</div>
+              <div className='happening-show-tags'>Game</div>
               {tags}
             </li>
             <li>

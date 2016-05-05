@@ -60,7 +60,7 @@ var NavigationBar = React.createClass({
     return (
       <div  className='navbar' >
         <h1 onClick={this.handleClick}>Session Finder</h1>
-        <div className='navbar-modal'>
+        <div className='navbar-happening-form'>
           <HappeningFormModal />
         </div>
         <div className='auth-container'>

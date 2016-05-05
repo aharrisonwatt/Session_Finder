@@ -15,14 +15,17 @@ var HappeningShowModal = React.createClass({
     },
 
     render: function(){
+      var happening = this.props.happening;
       return(
         <div className='happening-show-modal'>
-          <button onClick={this.openModal}>Create A Session</button>
+          <button className='pure-button' onClick={this.openModal}>View Details</button>
 
           <Modal
+            className='modal'
+            overlayClassName='modal-overlay'
             isOpen={this.state.modalOpen}
             onRequestClose={this.closeModal}>
-            <HappeningShow />
+            <HappeningShow happening={happening} closeModal={this.closeModal}/>
           </Modal>
         </div>
       );
