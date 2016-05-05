@@ -21,6 +21,10 @@ module.exports = {
     this.updateStore();
   },
 
+  resetFilters: function(){
+    filters = [];
+  },
+
   updateStore: function(){
     ClientActions.fetchAllHappenings(bounds, filters);
   }

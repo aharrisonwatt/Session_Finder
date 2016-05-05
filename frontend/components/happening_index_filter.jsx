@@ -15,6 +15,7 @@ var HappeningIndexFilter = React.createClass({
 
   componentDidMount: function () {
     this.tagListener = TagStore.addListener(this._onChange);
+    CurrentFilterState.resetFilters();
     ClientActions.fetchAllTags();
   },
 
