@@ -24,9 +24,9 @@ var HappeningIndex = React.createClass({
   },
 
   noHappenings: function(){
-    if(this.state.happenings === undefined){
+    if(Object.keys(this.state.happenings).length === 0){
       return(
-        <h3>No Sessions Found</h3>
+        <h3 className='happening-index-warning'>No Sessions Found</h3>
       );
     }
   },
@@ -37,6 +37,7 @@ var HappeningIndex = React.createClass({
       <div className="happening-index">
         <HappeningIndexFilter />
         <div className="index-item-container">
+          {this.noHappenings()}
           {
             Object.keys(happenings).map(function(happeningId){
               return (
