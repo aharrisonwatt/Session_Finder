@@ -9,7 +9,6 @@
 Happening.create([
   { user_id: 1, date: DateTime.now, lat: 37.772296, lng: -122.412911,
     title: "SF Game Night", body: "Game Night is hosted by ShowDown every Tuesday and Thursday at Folsom Street Foundry. We set up a variety of console, PC, and board games as well as offer a great opportunity to meet local fellow gamers and make new friends!
-
 Age Restriction - 21+
 Cover - $5
 Payment Options - Credit Card or Cash"},

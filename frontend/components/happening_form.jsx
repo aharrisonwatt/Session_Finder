@@ -100,7 +100,7 @@ var HappeningForm = React.createClass({
   handleSubmit: function(event){
     event.preventDefault();
     if (HappeningFormTags.getTags().tags.length === 0) {
-      this.setState( {errors:'Please Select A Game'} );
+      this.setState( {errors:'Please Select a Game'} );
     }else{
       var tags = HappeningFormTags.getTags();
       var happening = Object.assign({}, this.state, tags);
