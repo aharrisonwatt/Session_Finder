@@ -27,7 +27,7 @@ The event items show are also filtered based on a simple tag parameter showcased
 ###Database
 The database tracks all events(called happenings) in a single table.  All the images for events is abstracted away into a second table to easily allow the database to accommodate multiple images per event.  The tags for event event are stored in a joins table connecting each event tags.  This keeps the tagging system flexable for future growth and allows for easily editing of available tags.  Setting up a association between events and their tags allows for easy filtering of events with a single query reducing how often we have to hit our database.
 
-'''Ruby
+```Ruby
 def self.has_tag(tagIds)
   tagIds = tagIds.map do |tag|
     tag.to_i
