@@ -1,13 +1,14 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var HappeningStore = require('../stores/happening_store'),
-    CurrentFilterState = require('../helpers/current_filter_state');
+    CurrentFilterState = require('../helpers/current_filter_state'),
+    MapHappeningShowModal = require('../modal_helpers/map_happening_show_modal');
 
 var ReactRouter = require('react-router'),
     hashHistory = ReactRouter.hashHistory;
 
 var markersArray = [];
-
+var showHappening;
 module.exports = React.createClass({
 
   getInitialState: function(){
@@ -79,7 +80,9 @@ module.exports = React.createClass({
           id: happening.id
           });
       google.maps.event.addListener(marker, 'click', function () {
-        hashHistory.push('happenings/' + marker.id);
+        that.setState(
+          {showHappening: happening}
+        );
       });
       return (
         markersArray.push(marker)
@@ -94,6 +97,7 @@ module.exports = React.createClass({
     return (
       <div className='map-container'>
         <div className="map" ref="map"/>
+        <MapHappeningShowModal happening={this.state.showHappening}/>
       </div>
     );
   }

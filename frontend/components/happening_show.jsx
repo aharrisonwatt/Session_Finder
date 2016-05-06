@@ -48,9 +48,7 @@ var HappeningShow = React.createClass({
       var title = happening.title;
       var body = happening.body;
       var dateObj = new Date(happening.date);
-      var date = (dateObj.getDay() + '/' +
-                 dateObj.getMonth() + '/' +
-                 dateObj.getFullYear());
+      var date = dateObj.toDateString();
     }
     return (
       <div className='happening-show-container'>

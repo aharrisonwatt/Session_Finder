@@ -11,9 +11,19 @@ var MapHappeningShowModal = React.createClass({
       this.setState({ modalOpen: false });
     },
 
+    openModal: function(happening){
+      this.setState(
+        {
+          modalOpen: true,
+          happening: happening
+        });
+    },
+
     render: function(){
-      debugger;
-      var happening = this.props.happenings[this.state.happeningId];
+      if (this.props[0]){
+        this.openModal(this.props.happening);
+      }
+      var happening = this.state.happening;
       return(
         <Modal
           className='modal'
@@ -26,12 +36,5 @@ var MapHappeningShowModal = React.createClass({
     }
 });
 
-MapHappeningShowModal.openModal = function(happeningId){
-  this.setState(
-    {
-      modalOpen: true,
-      happeningId: happeningId
-    });
-};
 
 module.exports = MapHappeningShowModal;
