@@ -30,7 +30,6 @@ var NavigationBar = React.createClass({
   logout: function(event){
     event.preventDefault();
     UserActions.logout();
-    hashHistory.push('/');
   },
 
   guestLogin: function(){
