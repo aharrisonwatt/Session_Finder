@@ -4,32 +4,15 @@ var React = require('react'),
 
 
 var MapHappeningShowModal = React.createClass({
-  getInitialState: function(){
-      return({ modalOpen: false });
-    },
-    closeModal: function(){
-      this.setState({ modalOpen: false });
-    },
-
-    openModal: function(happening){
-      this.setState(
-        {
-          modalOpen: true,
-          happening: happening
-        });
-    },
 
     render: function(){
-      if (this.props[0]){
-        this.openModal(this.props.happening);
-      }
-      var happening = this.state.happening;
+      var happening = this.props.happening;
       return(
         <Modal
           className='modal'
           overlayClassName='modal-overlay'
-          isOpen={this.state.modalOpen}
-          onRequestClose={this.closeModal}>
+          isOpen={this.props.isOpen}
+          onRequestClose={this.props.onClose}>
           <HappeningShow happening={happening} closeModal={this.closeModal}/>
         </Modal>
       );

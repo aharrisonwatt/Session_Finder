@@ -136,6 +136,10 @@ var HappeningForm = React.createClass({
     }
   },
 
+  addImage: function(){
+
+  },
+
   render: function() {
     return (
       <div className='happening-form'>
@@ -163,7 +167,7 @@ var HappeningForm = React.createClass({
                 value={this.state.address}
                 onChange={this.updateAddress}/>
             </label>
-            <label>Add an Image</label>
+            <label className='happening-form-label' onClick={this.addImage}>Add an Image</label>
             <label className='happening-form-label'> Image Url:
               <input
                 type="text"

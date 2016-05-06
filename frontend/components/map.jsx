@@ -81,12 +81,21 @@ module.exports = React.createClass({
           });
       google.maps.event.addListener(marker, 'click', function () {
         that.setState(
-          {showHappening: happening}
+          {
+            happening: happening,
+            modalIsOpen: true
+          }
         );
       });
       return (
         markersArray.push(marker)
       );
+    });
+  },
+
+  mapCloseModal: function(){
+    this.setState({
+      modalIsOpen: false
     });
   },
 
@@ -97,7 +106,10 @@ module.exports = React.createClass({
     return (
       <div className='map-container'>
         <div className="map" ref="map"/>
-        <MapHappeningShowModal happening={this.state.showHappening}/>
+        <MapHappeningShowModal
+          isOpen={this.state.modalIsOpen}
+          onClose={this.mapCloseModal}
+          happening={this.state.happening}/>
       </div>
     );
   }
