@@ -42,7 +42,7 @@ var HappeningFormModal = React.createClass({
     render: function(){
       return(
         <div className='form-modal'>
-          <button className='pure-button'
+          <button className='pure-button click-me'
                   onClick={this.openModal}>Create A Session</button>
           {this.modal()}
         </div>

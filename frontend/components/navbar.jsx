@@ -22,7 +22,7 @@ var NavigationBar = React.createClass({
 
     return (
       <div className='nav-user-auth'>
-        <button onClick={this.logout} className='pure-button'>Logout</button>
+        <button onClick={this.logout} className='pure-button light-click'>Logout</button>
       </div>
     );
   },
@@ -54,7 +54,7 @@ var NavigationBar = React.createClass({
     return (
       <div className='navbar-modal'>
         <div className='form-modal'>
-          <button className='pure-button' onClick={this.guestLogin}>Guest Login</button>
+          <button className='pure-button light-click' onClick={this.guestLogin}>Guest Login</button>
         </div>
         <LoginFormModal />
         <SignupFormModal />

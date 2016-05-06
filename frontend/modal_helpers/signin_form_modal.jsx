@@ -17,7 +17,7 @@ var SigninFormModal = React.createClass({
     render: function(){
       return(
         <div className='form-modal'>
-          <button className='pure-button'
+          <button className='pure-button light-click'
             onClick={this.openModal}>Sign Up</button>
 
           <Modal

@@ -18,7 +18,7 @@ var HappeningShowModal = React.createClass({
       var happening = this.props.happening;
       return(
         <div className='happening-show-modal'>
-          <button className='pure-button' onClick={this.openModal}>View Details</button>
+          <button className='pure-button click-me' onClick={this.openModal}>View Details</button>
 
           <Modal
             className='modal'
