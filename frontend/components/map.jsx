@@ -18,8 +18,8 @@ module.exports = React.createClass({
     this.happeningListener = HappeningStore.addListener(this._onChange);
     var map = ReactDOM.findDOMNode(this.refs.map);
     var mapOptions = {
-      center: {lat: 37.7758, lng: -122.435},
-      zoom: 12
+      center: {lat: 37.701988, lng: -122.118530},
+      zoom: 10
     };
     this.map = new google.maps.Map(map, mapOptions);
     this.registerListeners();
