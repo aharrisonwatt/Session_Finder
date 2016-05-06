@@ -153,20 +153,22 @@ var HappeningForm = React.createClass({
             <label className='happening-form-label'>Description:
               <input
                 type="textarea"
+                size="55"
                 value={this.state.body}
                 onChange={this.updateBody} />
-            </label>
-            <label className='happening-form-label'>image url:
-              <input
-                type="text"
-                value={this.state.image}
-                onChange={this.updateImage} />
             </label>
             <label className='happening-form-label'>Address:
               <input
                 type="text"
                 value={this.state.address}
                 onChange={this.updateAddress}/>
+            </label>
+            <label>Add an Image</label>
+            <label className='happening-form-label'> Image Url:
+              <input
+                type="text"
+                value={this.state.image}
+                onChange={this.updateImage} />
             </label>
             <div className="happening-form-confirm">
               <input  className="pure-button"
