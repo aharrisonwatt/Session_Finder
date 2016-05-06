@@ -20,25 +20,27 @@ var HappeningShow = React.createClass({
     var happeningId = this.props.happening.id;
     var happening = HappeningStore.find(happeningId) || {} ;
     this.setState( { happening: happening});
+    var coords = { lat: happening.lat, lng: happening.lng };
+    this.setAddress(coords);
   },
 
   setAddress: function(coords){
     var that = this;
-    var myLatlng = new google.maps.LatLng(coords.lat, coords.lng);
-    var geocoder = new google.maps.Geocoder();
-
-    geocoder.geocode({'location': myLatlng}, function(results){
-      that.setState({
-        address: results[0].formatted_address
+    if (coords){
+      var myLatlng = new google.maps.LatLng(coords.lat, coords.lng);
+      var geocoder = new google.maps.Geocoder();
+      geocoder.geocode({'location': myLatlng}, function(results){
+        that.setState({
+          address: results[0].formatted_address
+        });
       });
-    });
+    }
   },
 
   render: function() {
     if (this.state.happening){
       var happening = this.state.happening;
-      var coords = { lat: happening.lat, lng: happening.lng };
-      this.setAddress(coords);
+
       var images = happening.image.map(function(image){
         return <img key={image.id} className='happening-show-image' src={image.image_url}/>;
       });
