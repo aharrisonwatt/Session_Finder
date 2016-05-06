@@ -41,7 +41,9 @@ var NavigationBar = React.createClass({
   },
 
   sessionCreation: function(){
-
+    if(document.location.hash.startsWith('#/happening')){
+      return (<HappeningFormModal currentUser={this.state.currentUser}/>);
+    }
   },
 
   userAuth: function(){
@@ -65,7 +67,7 @@ var NavigationBar = React.createClass({
       <div  className='navbar' >
         <h1 onClick={this.handleClick}>Session Finder</h1>
         <div className='navbar-happening-form'>
-          <HappeningFormModal currentUser={this.state.currentUser}/>
+          {this.sessionCreation()}
         </div>
         <div className='auth-container'>
           {this.greeting()}
