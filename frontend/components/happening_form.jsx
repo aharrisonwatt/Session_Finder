@@ -9,6 +9,11 @@ var HappeningFormTags = require('./happening_form_tags'),
     ClientActions = require('../actions/client_actions');
 
 var markersArray = [];
+var stockImages = [
+  "https://scontent-sjc2-1.xx.fbcdn.net/v/l/t1.0-9/10407795_808844515801600_2345136807276568359_n.jpg?oh=6d45d668523c6ce1d1aa0ea3f69a8b6b&oe=57A469EF",
+  "https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/10310986_990096557676394_2673558533976698986_n.jpg?oh=b6ecd2df1f82f147d6e04196061a2401&oe=57E0FE91",
+  "https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/12921_1197215143631200_1163631033959292995_n.jpg?oh=f81b401e351ebf18e287f24bc749783a&oe=579FF8E0"
+];
 
 var HappeningForm = React.createClass({
 
@@ -98,9 +103,19 @@ var HappeningForm = React.createClass({
     }.bind(this));
   },
   handleSubmit: function(event){
-    event.preventDefault();
+    if (this.state.errors){
+      var perviousErrors = this.state.errors;
+    }
     if (HappeningFormTags.getTags().tags.length === 0) {
       this.setState( {errors:'Please Select a Game'} );
+    }else if (this.state.image === ''){
+      this.setState( {errors:'Please Select a Image'} );
+    }else if (this.state.lat === ''){
+      this.setState( {errors:'Please Enter a Valid Address'} );
+    }else if (this.state.body === ''){
+      this.setState( {errors:'Please Enter a Description'} );
+    }else if (this.state.title === ''){
+      this.setState( {errors:'Please Enter a Title'} );
     }else{
       var tags = HappeningFormTags.getTags();
       var happening = Object.assign({}, this.state, tags);
@@ -137,7 +152,12 @@ var HappeningForm = React.createClass({
   },
 
   addImage: function(){
-
+    var randomImage = stockImages[Math.floor(Math.random() * stockImages.length)];
+    this.setState(
+      {
+        image: randomImage
+      }
+    );
   },
 
   render: function() {
@@ -167,7 +187,7 @@ var HappeningForm = React.createClass({
                 value={this.state.address}
                 onChange={this.updateAddress}/>
             </label>
-            <label className='happening-form-label' onClick={this.addImage}>Add an Image</label>
+            <label className='happening-form-label happening-form-random-image' onClick={this.addImage}>Use a Stock Image</label>
             <label className='happening-form-label'> Image Url:
               <input
                 type="text"
