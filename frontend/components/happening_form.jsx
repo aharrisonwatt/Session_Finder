@@ -168,26 +168,34 @@ var HappeningForm = React.createClass({
           <h3 className="happening-form-header">Create A Session</h3>
           <HappeningFormTags />
           <form className="happening-form-inputs" onSubmit={this.handleSubmit}>
-            <label className='happening-form-label'>Title:
+            <label className='happening-form-label'>Title
+              <br></br>
               <input
+                className='happening-form-input-field'
                 type="text"
                 value={this.state.title}
                 onChange={this.updateTitle} />
             </label>
-            <label className='happening-form-label'>Add a Description:
+            <label className='happening-form-label'>Add a Description
+              <br></br>
               <textarea
                 value={this.state.body}
                 onChange={this.updateBody}></textarea>
             </label>
-            <label className='happening-form-label'>Address:
+            <label className='happening-form-label'>Address
+              <br></br>
               <input
+                className='happening-form-input-field'
                 type="text"
                 value={this.state.address}
+                placeholder='Enter session location or click on the map'
                 onChange={this.updateAddress}/>
             </label>
             <label className='happening-form-label happening-form-random-image' onClick={this.addImage}>Use a Stock Image</label>
-            <label className='happening-form-label'> Image Url:
+            <label className='happening-form-label'> Image Url
+              <br></br>
               <input
+                className='happening-form-input-field'
                 type="text"
                 value={this.state.image}
                 onChange={this.updateImage} />

@@ -32,6 +32,7 @@
 .happening-form-label {
   margin: 10px;
   padding: 2px;
+  text-decoration: underline;
 }
 
 .happening-form-inputs {
@@ -83,4 +84,15 @@
   color: blue;
   border: 1px solid blue;
   border-radius: 10px;
+  text-decoration: none;
+}
+
+textarea {
+  width: 40vh;
+  margin-top: 3px;
+}
+
+.happening-form-input-field {
+  width: 40vh;
+  margin-top: 3px;
 }
