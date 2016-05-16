@@ -53,14 +53,14 @@ var LoginForm = React.createClass({
         <div className='auth-form-container'>
           <h3 className='auth-header'>Log In</h3>
           <form className='auth-form' onSubmit={this.handleSubmit}>
-        		<label className='auth-form-item'> Username:
+        		<label className='auth-form-item'> Username: &nbsp;
         			<input
                 type="text"
                 value={this.state.username}
                 onChange={this.updateUsername}/>
         		</label>
 
-        		<label className='auth-form-item'> Password:
+        		<label className='auth-form-item'> Password: &nbsp;
         			<input
                 type="password"
                 value={this.state.password}
