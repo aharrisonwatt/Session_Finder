@@ -175,11 +175,9 @@ var HappeningForm = React.createClass({
                 onChange={this.updateTitle} />
             </label>
             <label className='happening-form-label'>Add a Description:
-              <input
-                type="textarea"
-                size="55"
+              <textarea
                 value={this.state.body}
-                onChange={this.updateBody} />
+                onChange={this.updateBody}></textarea>
             </label>
             <label className='happening-form-label'>Address:
               <input
