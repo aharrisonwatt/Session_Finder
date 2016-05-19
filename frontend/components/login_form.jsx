@@ -83,7 +83,7 @@ var LoginForm = React.createClass({
     guestLoginButton: function(){
       if (this.props.error){
         return(
-          <button className='pure-button auth-form-item' onClick={this.guestLogin}>Guest Login</button>
+          <button className='pure-button auth-form-item auth-button' onClick={this.guestLogin}>Guest Login</button>
         );
       }
     },
