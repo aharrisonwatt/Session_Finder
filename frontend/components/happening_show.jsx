@@ -4,12 +4,11 @@ var React = require('react'),
 
 var HappeningShow = React.createClass({
   getInitialState: function () {
-    return { happening: undefined };
+    return { happening: this.props.happening };
   },
 
   componentDidMount: function() {
     this.happeningListener = HappeningStore.addListener(this._onChange);
-    ClientActions.fetchSingleHappening(this.props.happening.id);
   },
 
   componentWillUnmount: function() {
