@@ -41,20 +41,20 @@ Payment Options - Credit Card or Cash"},
   ])
 
 Image.create([
-  { happening_id: 2, image_url: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/12743503_10153377170664103_977909666938449465_n.jpg?oh=a6d8171e1ed63b541e76e25bde8f37ef&oe=57E1C3EA'},
+  { happening_id: 2, image_url: 'http://res.cloudinary.com/awatt/image/upload/v1475273763/14138691_1824986801065982_1030779938059210097_o_hby2tt.jpg'},
   { happening_id: 1, image_url: 'http://res.cloudinary.com/awatt/image/upload/v1461886408/Showdown_streetfighter_xi6tic.jpg'},
-  { happening_id: 3, image_url: 'https://scontent.xx.fbcdn.net/v/t1.0-9/13165845_1140435315991091_632727227183451541_n.jpg?oh=76cc8a260cd86376133f1349ce07451e&oe=57E1CDA0'},
-  { happening_id: 4, image_url: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/12106747_1682001702040626_3366909897101052916_n.jpg?oh=b5f45523f69dd7b3aca312299ab1cc5f&oe=57E5BA2A'},
-  { happening_id: 5, image_url: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/11178226_2839345256849_8616719376877153538_n.jpg?oh=73608ac32ddb222c03c30ad13020b49e&oe=579C560D'},
-  { happening_id: 6, image_url: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/10347425_10152153920596533_1945595485922499993_n.jpg?oh=02d15fe37c87e90fede82db799da8fa5&oe=57AE9403'},
-  { happening_id: 7, image_url: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/1424278_10152004770384265_1932674344_n.jpg?oh=3d40a296d85d0c26f8035d14cc87d18d&oe=57B6071B'},
+  { happening_id: 3, image_url: 'http://res.cloudinary.com/awatt/image/upload/v1475273762/14125691_1824986861065976_8234143090300018605_o_zvywwh.jpg'},
+  { happening_id: 4, image_url: 'http://res.cloudinary.com/awatt/image/upload/v1475273762/13920026_1812943105603685_4751867285150794939_o_h2cyhn.jpg'},
+  { happening_id: 5, image_url: 'http://res.cloudinary.com/awatt/image/upload/v1475273762/13603790_1795047897393206_461153523118726913_o_weayba.jpg'},
+  { happening_id: 6, image_url: 'http://res.cloudinary.com/awatt/image/upload/v1475273762/13559209_1795040884060574_2671881236008071993_o_ibmbzc.jpg'},
+  { happening_id: 7, image_url: 'http://res.cloudinary.com/awatt/image/upload/v1475273761/13558971_1795040590727270_1972339033021461110_o_xhl5qp.jpg'},
   { happening_id: 8, image_url: 'http://www.ptbpro.org/ESports/Absolute-Battle/Absolute-Battle-6-Vol-II/i-SmsmSnj/0/X3/ab6_event_daythree_vol2-130-X3.jpg'},
   { happening_id: 9, image_url: 'http://www.ptbpro.org/ESports/Halo-5-Midnight-Launch/i-bC9JbbD/0/X3/halo5_launch-30-X3.jpg'},
-  { happening_id: 10, image_url: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/11223312_1198354756850572_7487441950854360131_n.jpg?oh=24dd8a7547edbdaaf43bdd2d5cc969ea&oe=579ABD28'},
-  { happening_id: 11, image_url: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/12801545_1197198876966160_7887672107051553724_n.jpg?oh=633e784505c4465b1bcb52fd768e19c9&oe=57AA4B19'},
-  { happening_id: 12, image_url: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/74955_1180292698656778_5738530942936964157_n.jpg?oh=13e7d73048ac962cc84c0a120aff20fb&oe=57B67B5F'},
-  { happening_id: 13, image_url: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/12742511_1163536103665771_4171179976420554256_n.jpg?oh=b3260e80b0f49e84de928a722dd642c4&oe=579E5FED'},
-  { happening_id: 14, image_url: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/10419388_990096957676354_3168886750439369765_n.jpg?oh=48bbbe5d329b623ad9d708f7a9e78ed5&oe=579D2002'},
+  { happening_id: 10, image_url: 'http://res.cloudinary.com/awatt/image/upload/v1475273761/13558940_1795047954059867_2291421193862324397_o_br85zp.jpg'},
+  { happening_id: 11, image_url: 'http://res.cloudinary.com/awatt/image/upload/v1475273760/12744052_1735995739965089_7496259105430688442_n_trcynd.jpg'},
+  { happening_id: 12, image_url: 'http://res.cloudinary.com/awatt/image/upload/v1475273760/11088979_1623836341181030_8027423086468428184_o_kaui2h.jpg'},
+  { happening_id: 13, image_url: 'http://res.cloudinary.com/awatt/image/upload/v1461886410/CEO_FGC_pnjhpt.jpg'},
+  { happening_id: 14, image_url: 'http://res.cloudinary.com/awatt/image/upload/v1461886408/Smash_i757ik.jpg'},
   ])
 
 Tag.create([
