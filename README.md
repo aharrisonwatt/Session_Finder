@@ -2,7 +2,7 @@
 [SessionFinder Live][site]
 [site]: http://www.sessionfinder.online
 
-SessionFinder is a full-stack web application.  SessionFinder uses Ruby on Rails with a PostgresSQL database for the backend.  SessionFinder utilizes Facebook's React.js design with a Flux artitecture to delivery front end content.
+SessionFinder is a full-stack web application.  SessionFinder uses Ruby on Rails with a PostgresSQL database for the backend.  SessionFinder utilizes Facebook's React.js design with a Flux architecture to delivery front end content.
 
 ###Google Maps API
 SessionFinder integrates a lot of functionality offered from the google maps API.  By adding a event listener to the map to triggers on idle map markers are loaded.  The current bounds of the map is parsed away and only events within the current view scope are loaded on the map.
