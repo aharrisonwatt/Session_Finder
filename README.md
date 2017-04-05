@@ -1,6 +1,7 @@
 # SessionFinder
-[SessionFinder Live][site]
 [site]: http://www.sessionfinder.online
+[SessionFinder Live][site]
+
 
 SessionFinder is a full-stack web application.  SessionFinder uses Ruby on Rails with a PostgresSQL database for the backend.  SessionFinder utilizes Facebook's React.js design with a Flux architecture to delivery front end content.
 
